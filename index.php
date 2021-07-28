@@ -1,4 +1,12 @@
-<h1> Welcome to  the server </h1>
-<?php echo "This is a little test!" ?>
-<?php echo "new test!" ?>
-<?php echo "new test!" ?>
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+
+</body>
+</html>
