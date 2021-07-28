@@ -8,8 +8,10 @@
 <body>
 
 <?php include 'head.php'; ?>
+<?php include 'mysql_queries.php'; ?>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+
+test()
+
 
 <?php include 'tail.php'; ?>
