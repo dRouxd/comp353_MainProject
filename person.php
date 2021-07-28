@@ -11,7 +11,7 @@
 <?php include 'mysql_queries.php'; ?>
 
 
-test()
+<?php test(); ?>
 
 
 <?php include 'tail.php'; ?>
