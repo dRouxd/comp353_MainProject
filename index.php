@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-
-</head>
-<body>
+<?php include 'head.php'; ?>
 
 <h1>My First Heading</h1>
 <p>My first paragraph.</p>
 
-</body>
-</html>
+<?php include 'tail.php'; ?>
