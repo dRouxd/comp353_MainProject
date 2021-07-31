@@ -38,11 +38,11 @@ $person =
 
 <form class="inForm">
     <p class="inForm">
-        <label class="inForm" for="">SSN</label>
+        <label class="inForm" for="">SSN: </label>
         <input class="inForm" id="" type="text" value="test">
     </p>
     <p class="inForm">
-        <label class="inForm" for="">Date of Birth</label>
+        <label class="inForm" for="">Date of Birth: </label>
         <input class="inForm" id="" type="text" value="test">
     </p>
 </form>
