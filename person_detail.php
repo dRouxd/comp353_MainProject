@@ -48,6 +48,62 @@ $infections =
 <?php include 'head.php'; ?>
 <a href="person_edit.php?person_id=<?php print($person_id); ?>">Edit</a>
 
+<h3>Details</h3>
+<table class="default">
+    <tr class="default">
+        <th class="default">SSN</th>
+        <td class="default"></td>
+    </tr>
+    <tr class="default">
+        <th class="default">First Name</th>
+        <td class="default"></td>
+    </tr>
+    <tr class="default">
+        <th class="default">Last Name</th>
+        <td class="default"></td>
+    </tr>
+    <tr class="default">
+        <th class="default">Date of Birth</th>
+        <td class="default"></td>
+    </tr>
+    <tr class="default">
+        <th class="default">Age</th>
+        <td class="default"></td>
+    </tr>
+    <tr class="default">
+        <th class="default">Medicare Card Number</th>
+        <td class="default"></td>
+    </tr>
+    <tr class="default">
+        <th class="default">Telephone</th>
+        <td class="default"></td>
+    </tr>
+    <tr class="default">
+        <th class="default">Email</th>
+        <td class="default"></td>
+    </tr>
+    <tr class="default">
+        <th class="default">Address</th>
+        <td class="default"></td>
+    </tr>
+    <tr class="default">
+        <th class="default">City</th>
+        <td class="default"></td>
+    </tr>
+    <tr class="default">
+        <th class="default">Province</th>
+        <td class="default"></td>
+    </tr>
+    <tr class="default">
+        <th class="default">Postal Code</th>
+        <td class="default"></td>
+    </tr>
+    <tr class="default">
+        <th class="default">Citizenship</th>
+        <td class="default"></td>
+    </tr>
+</table>
+
 <h3>Vaccinations</h3>
 <table class="default">
     <tr class="default">
