@@ -36,9 +36,9 @@ $person =
 
 ?>
 
-<p><a href="person_edit.php?person=<?php print($person_id); ?>">Edit</p>
+<p><a href="person_edit.php?person=<?php print($person_id); ?>">Edit</a></p>
 
-<div>
+<div class="inForm">
     <form>
         <label>SSN</label>
         <input type="" name=""></input></br>
