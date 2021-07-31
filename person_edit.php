@@ -29,6 +29,19 @@ $person =
     "citizenship" => "Canadian"
 ];
 
+# TODO: Get Vaccines received from mysql
+$vaccines = 
+[
+
+];
+
+# TODO: Get infections from mysql
+$infections = 
+[
+["type" => "delta", "date_of_infection" => "2021-01-01"],
+["type" => "omega", "date_of_infection" => "2021-01-02"]
+];
+
 # TODO: Get provinces from Mysql
 $provinces = [
     "AB",
@@ -132,7 +145,23 @@ foreach($provinces as $p)
 
 <h3>Infections</h3>
 
-
+<table class="default">
+    <tr class="default">
+        <th class="default">Type</th>
+        <th class="default">Date of Infection</th>
+    </tr>
+<?php
+foreach($infections as $infection)
+{
+?>
+    <tr class="default">
+        <td class="default"><?php print($infection["type"]); ?></td>
+        <td class="default"><?php print($infection["date_of_infection"]); ?></td>
+    </tr>
+<?php   
+}
+?>
+</table>
 
 
 <?php include 'tail.php'; ?>
