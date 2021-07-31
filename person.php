@@ -10,7 +10,7 @@
 <?php include 'head.php'; ?>
 <?php include 'mysql_queries.php'; ?>
 
-<table class="default" border="1px solid black">
+<table class="default">
     <tr class="default">
         <th class="default">First Name</th>
         <th class="default">Last Name</th>
