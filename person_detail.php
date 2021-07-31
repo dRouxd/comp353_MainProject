@@ -52,55 +52,55 @@ $infections =
 <table class="default">
     <tr class="default">
         <th class="default">SSN</th>
-        <td class="default"></td>
+        <td class="default"><?php print($person["ssn"]); ?></td>
     </tr>
     <tr class="default">
         <th class="default">First Name</th>
-        <td class="default"></td>
+        <td class="default"><?php print($person["fname"]); ?></td>
     </tr>
     <tr class="default">
         <th class="default">Last Name</th>
-        <td class="default"></td>
+        <td class="default"><?php print($person["lname"]); ?></td>
     </tr>
     <tr class="default">
         <th class="default">Date of Birth</th>
-        <td class="default"></td>
+        <td class="default"><?php print($person["date_of_birth"]); ?></td>
     </tr>
     <tr class="default">
         <th class="default">Age</th>
-        <td class="default"></td>
+        <td class="default"><?php print($person["age"]); ?></td>
     </tr>
     <tr class="default">
         <th class="default">Medicare Card Number</th>
-        <td class="default"></td>
+        <td class="default"><?php print($person["medicare_card_number"]); ?></td>
     </tr>
     <tr class="default">
         <th class="default">Telephone</th>
-        <td class="default"></td>
+        <td class="default"><?php print($person["telephone"]); ?></td>
     </tr>
     <tr class="default">
         <th class="default">Email</th>
-        <td class="default"></td>
+        <td class="default"><?php print($person["email"]); ?></td>
     </tr>
     <tr class="default">
         <th class="default">Address</th>
-        <td class="default"></td>
+        <td class="default"><?php print($person["address"]); ?></td>
     </tr>
     <tr class="default">
         <th class="default">City</th>
-        <td class="default"></td>
+        <td class="default"><?php print($person["city"]); ?></td>
     </tr>
     <tr class="default">
         <th class="default">Province</th>
-        <td class="default"></td>
+        <td class="default"><?php print($person["province"]); ?></td>
     </tr>
     <tr class="default">
         <th class="default">Postal Code</th>
-        <td class="default"></td>
+        <td class="default"><?php print($person["postal_code"]); ?></td>
     </tr>
     <tr class="default">
         <th class="default">Citizenship</th>
-        <td class="default"></td>
+        <td class="default"><?php print($person["citizenship"]); ?></td>
     </tr>
 </table>
 
