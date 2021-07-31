@@ -32,8 +32,8 @@ $person =
 # TODO: Get Vaccines received from mysql
 $vaccines = 
 [
-["vaccination_id" => "1", "dose_number" => 1, "vaccination_date" => "2021-02-01", "vaccine_id" => "1", "brand" => "moderna"],
-["vaccination_id" => "2", "dose_number" => 2, "vaccination_date" => "2021-03-01", "vaccine_id" => "1", "brand" => "moderna"] 
+["vaccination_id" => "1", "dose_number" => 1, "vaccination_date" => "2021-02-01", "vaccine_id" => "1", "brand" => "moderna", "eid" => "6", "name" => "Matilda Grouch", "facility_id" => "1", "facility_name" => "CHUM"],
+["vaccination_id" => "2", "dose_number" => 2, "vaccination_date" => "2021-03-01", "vaccine_id" => "1", "brand" => "moderna", "eid" => "6", "name" => "Matilda Grouch", "facility_id" => "1", "facility_name" => "CHUM"] 
 ];
 
 # TODO: Get infections from mysql
@@ -141,12 +141,14 @@ foreach($provinces as $p)
     <input type="submit" name="save" value="Save"/>
 </form>
 
-<h3>Vaccines</h3>
+<h3>Vaccinations</h3>
 <table class="default">
     <tr class="default">
         <th class="default">Dose Number</th>
         <th class="default">Vaccination Date</th>
         <th class="default">Brand</th>
+        <th class="default">Employee Name</th>
+        <th class="default">HSO Location</th>
     </tr>
 <?php
 foreach($vaccines as $vaccine)
@@ -156,12 +158,16 @@ foreach($vaccines as $vaccine)
         <td class="default"><?php print($vaccine["dose_number"]); ?></td>
         <td class="default"><?php print($vaccine["vaccination_date"]); ?></td>
         <td class="default"><a href="vaccine_detail.php?vaccine_id=<?php print($vaccine["vaccine_id"]); ?>"><?php print($vaccine["brand"]); ?></a></td>
+        <td class="default"><a href="person.php?person_id=<?php print($vaccine["eid"]); ?>"><?php print($vaccine["name"]); ?></a></td>
+        <td class="default"><a href="hso_detail.php?facility_id=<?php print($vaccine["facility_id"]); ?>"><?php print($vaccine["facility_name"]); ?></a></td>
         <td class="default"><a href="vaccination_edit.php?vaccination_id=<?php print($vaccine["vaccination_id"]); ?>">Edit</a></td>
     </tr>
 <?php   
 }
 ?>
 </table>
+</table>
+<a href="add_vaccination.php?person_id=<?php print($person_id); ?>">Add Vaccination</a>
 
 <h3>Infections</h3>
 

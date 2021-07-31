@@ -48,7 +48,7 @@ $infections =
 <?php include 'head.php'; ?>
 
 
-<h3>Vaccines</h3>
+<h3>Vaccinations</h3>
 <table class="default">
     <tr class="default">
         <th class="default">Dose Number</th>
@@ -63,7 +63,6 @@ foreach($vaccines as $vaccine)
         <td class="default"><?php print($vaccine["dose_number"]); ?></td>
         <td class="default"><?php print($vaccine["vaccination_date"]); ?></td>
         <td class="default"><a href="vaccine_detail.php?vaccine_id=<?php print($vaccine["vaccine_id"]); ?>"><?php print($vaccine["brand"]); ?></a></td>
-        <td class="default"><a href="vaccination_edit.php?vaccination_id=<?php print($vaccine["vaccination_id"]); ?>">Edit</a></td>
     </tr>
 <?php   
 }
@@ -84,7 +83,6 @@ foreach($infections as $infection)
     <tr class="default">
         <td class="default"><?php print($infection["type"]); ?></td>
         <td class="default"><?php print($infection["date_of_infection"]); ?></td>
-        <td class="default"><a href="infection_edit.php?infection_id=<?php print($infection["infection_id"]); ?>">Edit</a></td>
     </tr>
 <?php   
 }
