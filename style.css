@@ -46,10 +46,12 @@ body {
 
 th {
   border: 1px solid black;
+  margin: 5px;
 }
 
 td {
   border: 1px solid black;
+  margin: 5px;
 }
 
 table{
