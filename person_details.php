@@ -1,22 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Person Detail</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
-<body>
-
-<?php include 'head.php'; ?>
 <?php include 'mysql_queries.php'; ?>
-
 <?php
 
 $person_id = $_GET["person"];
 
 $person = 
 [
-    "person_id" => 2,
     "ssn" => "666999888",
     "fname" => "Johnny",
     "lname" => "Smithy",
@@ -35,6 +23,16 @@ $person =
 
 
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Person Detail</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<body>
+
+<?php include 'head.php'; ?>
 
 
 

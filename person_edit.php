@@ -57,7 +57,7 @@ $provinces = [
 <body>
 
 <?php include 'head.php'; ?>
-
+<h3>Details</h3>
 <form class="inForm" action="/person_edit.php?person=<?php print($person_id); ?>"  method="post">
     <input type="hidden" id="person_id" name="person_id" value="<?php print($person_id); ?>">
     <p class="inForm">
@@ -126,6 +126,14 @@ foreach($provinces as $p)
     </p>
     <input type="submit" name="save" value="Save"/>
 </form>
+
+<h3>Vaccines</h3>
+
+
+<h3>Infections</h3>
+
+
+
 
 <?php include 'tail.php'; ?>
 
