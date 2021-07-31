@@ -11,16 +11,16 @@
 <?php include 'mysql_queries.php'; ?>
 
 <table>
-    <th>
-        <td>First Name</td>
-        <td>Last Name</td>
-        <td>Date of Birth</td>
-        <td>Age</td>
-        <td>Medicare Number</td>
-        <td>Phone</td>
-        <td>Email</td>
-        <td>Edit</td>
-    </th>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Date of Birth</th>
+        <th>Age</th>
+        <th>Medicare Number</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Edit</th>
+    </tr>
 
 <?php
 
