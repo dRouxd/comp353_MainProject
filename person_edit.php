@@ -37,13 +37,13 @@ $person =
 ?>
 
 <form class="inForm">
-    <p>
-        <label for="">SSN</label>
-        <input id="" type="text" value="test">
+    <p class="inForm">
+        <label class="inForm" for="">SSN</label>
+        <input class="inForm" id="" type="text" value="test">
     </p>
-    <p>
-        <label for="">Date of Birth</label>
-        <input id="" type="text" value="test">
+    <p class="inForm">
+        <label class="inForm" for="">Date of Birth</label>
+        <input class="inForm" id="" type="text" value="test">
     </p>
 </form>
 
