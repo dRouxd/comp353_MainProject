@@ -93,7 +93,7 @@ $provinces = [
         
         <select class="inForm" name="province" id="province">
 <?php
-foreach($province as $p)
+foreach($provinces as $p)
 {
     if($p == $person["province"])
     {
