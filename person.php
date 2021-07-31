@@ -19,7 +19,6 @@
         <th>Medicare Number</th>
         <th>Phone</th>
         <th>Email</th>
-        <th>Edit</th>
     </tr>
 
 <?php
