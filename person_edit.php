@@ -38,8 +38,7 @@ $person =
 
 <div class="inForm">
     <form>
-        <label>SSN</label>
-        <input type="" name=""></input></br>
+        <label>SSN</label> <input type="" name=""></input></br>
         <label>First Name</label>
         <input type="" name=""></input></br>
         <label>Last Name</label>
