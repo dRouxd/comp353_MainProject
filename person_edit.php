@@ -14,7 +14,7 @@
 
 $person_id = $_GET["person"];
 
-print($_POST);
+print_r($_POST);
 
 $person = 
 [
