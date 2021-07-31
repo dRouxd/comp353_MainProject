@@ -52,7 +52,7 @@ foreach($listPeople as $person)
         <td><?php print($v); ?></td>
         <?php
     }
-?>      <td></td>
+?>      <td>Details Edit</td>
     </tr>
 <?php
 }
