@@ -32,6 +32,21 @@ $person =
     "citizenship" => "Canadian"
 ];
 
+$provinces = [
+    "AB",
+    "BC",
+    "MB",
+    "NB",
+    "NL",
+    "NS",
+    "NT",
+    "NU",
+    "ON",
+    "PE",
+    "QC",
+    "SK",
+    "YT"
+]
 
 
 ?>
@@ -77,8 +92,20 @@ $person =
         <label class="inForm" for="province">Province: </label>
         
         <select class="inForm" name="province" id="province">
-            <option value="QC" selected="selected">QC</option>
-            <option value="ON">ON</option>
+<?php
+foreach($province as $p)
+{
+    if($p == $person["province"])
+    {
+?>           <option value="<?php print($p); ?>" selected="selected"><?php print($p); ?></option>
+<?php   
+    }else
+    {
+?>           <option value="<?php print($p); ?>"><?php print($p); ?></option>
+<?php
+    }
+}
+?>
         </select>
         
         <input class="inForm" name=""  id="" type="text" value="<?php print($person["province"]); ?>">
