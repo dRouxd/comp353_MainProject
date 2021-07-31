@@ -166,7 +166,6 @@ foreach($vaccines as $vaccine)
 }
 ?>
 </table>
-</table>
 <a href="add_vaccination.php?person_id=<?php print($person_id); ?>">Add Vaccination</a>
 
 <h3>Infections</h3>
