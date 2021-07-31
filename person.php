@@ -56,8 +56,8 @@ foreach($listPeople as $person)
         <td class="default"><?php print($person["email"]); ?></td>
         
 <?php
-    $detailsLink = "person_details.php?person=" . $person["person_id"];
-    $editLink = "person_edit.php?person=" . $person["person_id"];
+    $detailsLink = "person_details.php?person_id=" . $person["person_id"];
+    $editLink = "person_edit.php?person_id=" . $person["person_id"];
 ?>      <td class="default"><a href="<?php print($detailsLink); ?>">Details</a> <a href="<?php print($editLink); ?>">Edit</a></td>
     </tr>
 <?php

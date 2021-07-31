@@ -1,7 +1,7 @@
 <?php include 'mysql_queries.php'; ?>
 <?php
 
-$person_id = $_GET["person"];
+$person_id = $_GET["person_id"];
 
 # TODO: Get person data from mysql
 $person = 
