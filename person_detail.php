@@ -71,6 +71,7 @@ foreach($vaccines as $vaccine)
 <?php   
 }
 ?>
+</table>
 
 <h3>Infections</h3>
 
