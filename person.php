@@ -45,7 +45,7 @@ $listPeople = [[
 
 foreach($listPeople as $person)
 {
-    foreach($attribute as $k=>$v)
+    foreach($person as $k=>$v)
     {
         ?>
     <td><?php $v; ?><td>    
