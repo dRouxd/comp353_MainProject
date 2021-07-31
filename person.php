@@ -50,9 +50,11 @@ foreach($listPeople as $person)
     foreach($person as $k=>$v)
     {
 ?>
-        <td><?php print($v); ?></td><?php
+        <td><?php print($v); ?></td>
+        <?php
     }
-?>  </tr>
+?>      <td></td>
+    </tr>
 <?php
 }
 
