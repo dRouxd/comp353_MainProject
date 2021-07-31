@@ -10,6 +10,17 @@
 <?php include 'head.php'; ?>
 <?php include 'mysql_queries.php'; ?>
 
+<table>
+<th>
+    <td>First Name</td>
+    <td>Last Name</td>
+    <td>Date of Birth</td>
+    <td>Age</td>
+    <td>Medicare Number</td>
+    <td>Phone</td>
+    <td>Email</td>
+</th>
+</table>
 
 <?php test(); ?>
 

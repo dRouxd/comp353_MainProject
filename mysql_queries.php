@@ -16,7 +16,7 @@
     echo "Connected successfully";
     
     $sql = "SELECT person_id, fname, lname FROM Person";
-
+    $result = $conn->query($sql);
 
     if ($result->num_rows > 0) 
     {
