@@ -6,7 +6,7 @@ if(array_key_exists("save", $_POST))
 {
     #TODO: Send the updated data to the mysql
     
-    header("Location: person_details.php?person_id=" . $person_id);
+    header("Location: person_detail.php?person_id=" . $person_id);
     die();
 }
 
@@ -158,7 +158,7 @@ foreach($vaccines as $vaccine)
         <td class="default"><?php print($vaccine["dose_number"]); ?></td>
         <td class="default"><?php print($vaccine["vaccination_date"]); ?></td>
         <td class="default"><a href="vaccine_detail.php?vaccine_id=<?php print($vaccine["vaccine_id"]); ?>"><?php print($vaccine["brand"]); ?></a></td>
-        <td class="default"><a href="person_details.php?person_id=<?php print($vaccine["eid"]); ?>"><?php print($vaccine["name"]); ?></a></td>
+        <td class="default"><a href="person_detail.php?person_id=<?php print($vaccine["eid"]); ?>"><?php print($vaccine["name"]); ?></a></td>
         <td class="default"><a href="hso_detail.php?facility_id=<?php print($vaccine["facility_id"]); ?>"><?php print($vaccine["facility_name"]); ?></a></td>
         <td class="default"><a href="vaccination_edit.php?vaccination_id=<?php print($vaccine["vaccination_id"]); ?>">Edit</a></td>
     </tr>
