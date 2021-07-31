@@ -11,16 +11,16 @@
 <?php include 'mysql_queries.php'; ?>
 
 <table>
-<th>
-    <td>First Name</td>
-    <td>Last Name</td>
-    <td>Date of Birth</td>
-    <td>Age</td>
-    <td>Medicare Number</td>
-    <td>Phone</td>
-    <td>Email</td>
-    <td></td>
-</th>
+    <th>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Date of Birth</td>
+        <td>Age</td>
+        <td>Medicare Number</td>
+        <td>Phone</td>
+        <td>Email</td>
+        <td></td>
+    </th>
 
 <?php
 
@@ -45,12 +45,15 @@ $listPeople = [[
 
 foreach($listPeople as $person)
 {
+?>  <tr>
+<?php
     foreach($person as $k=>$v)
     {
-        ?>
-    <td><?php $v; ?><td>    
-        <?php
+?>
+        <td><?php $v; ?><td><?php
     }
+?>  </tr>
+<?php
 }
 
 ?>
