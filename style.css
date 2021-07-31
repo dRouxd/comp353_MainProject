@@ -68,6 +68,7 @@ body {
 .inForm p     { display: table-row;  }
 .inForm label { display: table-cell; padding:5px;}
 .inForm input { display: table-cell; }
+.inForm select { display: table-cell; }
 
 
 
