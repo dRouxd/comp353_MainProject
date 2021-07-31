@@ -12,10 +12,16 @@
 
 <?php
 
+if(array_key_exists("save", $_POST))
+{
+    #TODO: Send the updated data to the mysql
+    
+    print("<p>Data saved successfully.</p>");
+}
+
 $person_id = $_GET["person"];
 
-print_r($_POST);
-
+# TODO: Get person data from mysql
 $person = 
 [
     "person_id" => 2,
@@ -34,6 +40,7 @@ $person =
     "citizenship" => "Canadian"
 ];
 
+# TODO: Get provinces from Mysql
 $provinces = [
     "AB",
     "BC",
@@ -53,7 +60,7 @@ $provinces = [
 
 ?>
 
-<form class="inForm" action="/person_edit.php?person_id=<?php print($person_id); ?>"  method="post">
+<form class="inForm" action="/person_edit.php?person=<?php print($person_id); ?>"  method="post">
     <input type="hidden" id="person_id" name="person_id" value="<?php print($person_id); ?>">
     <p class="inForm">
         <label class="inForm" for="SSN">SSN: </label>
