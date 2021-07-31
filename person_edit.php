@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Person Detail</title>
+<title>Person Edit</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
@@ -36,9 +36,7 @@ $person =
 
 ?>
 
-<p><a href="person_edit.php?person=<?php print($person_id); ?>">Edit</p>
-
-<div>
+<div class="inForm">
     <form>
         <label>SSN</label>
         <input type="" name=""></input></br>

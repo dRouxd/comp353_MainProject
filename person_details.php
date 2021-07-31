@@ -36,39 +36,7 @@ $person =
 
 ?>
 
-<p><a href="person_edit.php?person=<?php print($person_id); ?>">Edit</a></p>
 
-<div class="inForm">
-    <form>
-        <label>SSN</label>
-        <input type="" name=""></input></br>
-        <label>First Name</label>
-        <input type="" name=""></input></br>
-        <label>Last Name</label>
-        <input type="" name=""></input></br>
-        <label>Date of Birth</label>
-        <input type="" name=""></input></br>
-        <label>Age</label>
-        <input type="" name=""></input></br>
-        <label>Medicare Card Number</label>
-        <input type="" name=""></input></br>
-        <label></label>
-        <input type="" name=""></input></br>
-        <label></label>
-        <input type="" name=""></input></br>
-        <label></label>
-        <input type="" name=""></input></br>
-        <label></label>
-        <input type="" name=""></input></br>
-        <label></label>
-        <input type="" name=""></input></br>
-        <label></label>
-        <input type="" name=""></input></br>
-        <label></label>
-        <input type="" name=""></input></br>
-        
-    </form>
-</div>
 
 <?php include 'tail.php'; ?>
 
