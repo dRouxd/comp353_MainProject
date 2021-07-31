@@ -38,8 +38,8 @@ $vaccines =
 # TODO: Get infections from mysql
 $infections = 
 [
-["type" => "delta", "date_of_infection" => "2021-01-01"],
-["type" => "omega", "date_of_infection" => "2021-01-02"]
+["infection_id" => "1", "type" => "delta", "date_of_infection" => "2021-01-01"],
+["infection_id" => "2", "type" => "omega", "date_of_infection" => "2021-01-02"]
 ];
 
 # TODO: Get provinces from Mysql
@@ -157,6 +157,7 @@ foreach($infections as $infection)
     <tr class="default">
         <td class="default"><?php print($infection["type"]); ?></td>
         <td class="default"><?php print($infection["date_of_infection"]); ?></td>
+        <td class="default"><a href="infection_edit.php?infection_id=<?php print($infection["infection_is"]); ?>">Edit</a></td>
     </tr>
 <?php   
 }
