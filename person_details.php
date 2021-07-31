@@ -3,6 +3,7 @@
 
 $person_id = $_GET["person"];
 
+# TODO: Get person data from mysql
 $person = 
 [
     "ssn" => "666999888",
@@ -20,7 +21,19 @@ $person =
     "citizenship" => "Canadian"
 ];
 
+# TODO: Get Vaccines received from mysql
+$vaccines = 
+[
+["vaccination_id" => "1", "dose_number" => 1, "vaccination_date" => "2021-02-01", "vaccine_id" => "1", "brand" => "moderna"],
+["vaccination_id" => "2", "dose_number" => 2, "vaccination_date" => "2021-03-01", "vaccine_id" => "1", "brand" => "moderna"] 
+];
 
+# TODO: Get infections from mysql
+$infections = 
+[
+["infection_id" => "1", "type" => "delta", "date_of_infection" => "2021-01-01"],
+["infection_id" => "2", "type" => "omega", "date_of_infection" => "2021-01-02"]
+];
 
 ?>
 <!DOCTYPE html>
@@ -34,6 +47,49 @@ $person =
 
 <?php include 'head.php'; ?>
 
+
+<h3>Vaccines</h3>
+<table class="default">
+    <tr class="default">
+        <th class="default">Dose Number</th>
+        <th class="default">Vaccination Date</th>
+        <th class="default">Brand</th>
+    </tr>
+<?php
+foreach($vaccines as $vaccine)
+{
+?>
+    <tr class="default">
+        <td class="default"><?php print($vaccine["dose_number"]); ?></td>
+        <td class="default"><?php print($vaccine["vaccination_date"]); ?></td>
+        <td class="default"><a href="vaccine_detail.php?vaccine_id=<?php print($vaccine["vaccine_id"]); ?>"><?php print($vaccine["brand"]); ?></a></td>
+        <td class="default"><a href="vaccination_edit.php?vaccination_id=<?php print($vaccine["vaccination_id"]); ?>">Edit</a></td>
+    </tr>
+<?php   
+}
+?>
+</table>
+
+<h3>Infections</h3>
+
+<table class="default">
+    <tr class="default">
+        <th class="default">Type</th>
+        <th class="default">Date of Infection</th>
+    </tr>
+<?php
+foreach($infections as $infection)
+{
+?>
+    <tr class="default">
+        <td class="default"><?php print($infection["type"]); ?></td>
+        <td class="default"><?php print($infection["date_of_infection"]); ?></td>
+        <td class="default"><a href="infection_edit.php?infection_id=<?php print($infection["infection_id"]); ?>">Edit</a></td>
+    </tr>
+<?php   
+}
+?>
+</table>
 
 
 <?php include 'tail.php'; ?>
