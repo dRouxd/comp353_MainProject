@@ -12,14 +12,14 @@
 
 <?php
 
+$person_id = $_GET["person"];
+
 if(array_key_exists("save", $_POST))
 {
     #TODO: Send the updated data to the mysql
     
-    print("<p>Data saved successfully.</p>");
+    header("Location: person_details.php?person=" . $person_id);
 }
-
-$person_id = $_GET["person"];
 
 # TODO: Get person data from mysql
 $person = 
