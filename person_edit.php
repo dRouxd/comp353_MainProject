@@ -141,8 +141,6 @@ foreach($provinces as $p)
     <input type="submit" name="save" value="Save"/>
 </form>
 
-["vaccination_id" => "1", "dose_number" => 1, "vaccination_date" => "2021-02-01", "vaccine_id" => "1", "brand" => "moderna"]
-
 <h3>Vaccines</h3>
 <table class="default">
     <tr class="default">
