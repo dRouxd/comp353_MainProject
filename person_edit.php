@@ -52,6 +52,7 @@ $provinces = [
 ?>
 
 <form class="inForm">
+    <input type="hidden" id="person_id" name="person_id" value="<?php print($person_id); ?>">
     <p class="inForm">
         <label class="inForm" for="SSN">SSN: </label>
         <input class="inForm" name="SSN" id="SSN" type="text" value="<?php print($person["ssn"]); ?>">
@@ -107,8 +108,6 @@ foreach($provinces as $p)
 }
 ?>
         </select>
-        
-        <input class="inForm" name=""  id="" type="text" value="<?php print($person["province"]); ?>">
     </p>
     <p class="inForm">
         <label class="inForm" for="postal_code">Postal Code: </label>
