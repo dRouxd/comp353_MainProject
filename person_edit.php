@@ -157,7 +157,7 @@ foreach($infections as $infection)
     <tr class="default">
         <td class="default"><?php print($infection["type"]); ?></td>
         <td class="default"><?php print($infection["date_of_infection"]); ?></td>
-        <td class="default"><a href="infection_edit.php?infection_id=<?php print($infection["infection_is"]); ?>">Edit</a></td>
+        <td class="default"><a href="infection_edit.php?infection_id=<?php print($infection["infection_id"]); ?>">Edit</a></td>
     </tr>
 <?php   
 }
