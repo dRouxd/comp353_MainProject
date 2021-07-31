@@ -19,6 +19,7 @@ if(array_key_exists("save", $_POST))
     #TODO: Send the updated data to the mysql
     
     header("Location: person_details.php?person=" . $person_id);
+    die();
 }
 
 # TODO: Get person data from mysql
