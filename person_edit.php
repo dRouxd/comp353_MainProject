@@ -117,7 +117,7 @@ foreach($provinces as $p)
         <label class="inForm" for="citizenship">Citizenship: </label>
         <input class="inForm" name="citizenship"  id="citizenship" type="text" value="<?php print($person["citizenship"]); ?>">
     </p>
-    <input type="submit"
+    <input type="submit" value="Save"/>
 </form>
 
 <?php include 'tail.php'; ?>
