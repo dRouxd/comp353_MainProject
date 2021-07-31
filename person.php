@@ -24,6 +24,7 @@
 <?php
 
 $listPeople = [[
+    "person_id" => 1,
     "fname" => "John",
     "lname" => "Smith",
     "date_of_birth" => "1990-07-31",
@@ -33,6 +34,7 @@ $listPeople = [[
     "email" => "john.smith@gmail.com"
 ],
 [
+    "person_id" => 2,
     "fname" => "Johnny",
     "lname" => "Smithy",
     "date_of_birth" => "1980-07-31",
@@ -45,14 +47,18 @@ $listPeople = [[
 foreach($listPeople as $person)
 {
 ?>  <tr>
+        <td><?php print($person["fname"]); ?></td>
+        <td><?php print($person["lname"]); ?></td>
+        <td><?php print($person["date_of_birth"]); ?></td>
+        <td><?php print($person["age"]); ?></td>
+        <td><?php print($person["medicare_card_number"]); ?></td>
+        <td><?php print($person["telephone"]); ?></td>
+        <td><?php print($person["email"]); ?></td>
+        
 <?php
-    foreach($person as $k=>$v)
-    {
-?>
-        <td><?php print($v); ?></td>
-        <?php
-    }
-?>      <td>Details Edit</td>
+    $detailsLink = "person_details.php?person=" . $person["person_id"];
+    $editLink = "person_edit.php?person=" . $person["person_id"];
+?>      <td><a href="<?php print($detailsLink); ?>">Details</a> <a href="<?php print($editLink); ?>">Edit</a></td>
     </tr>
 <?php
 }
