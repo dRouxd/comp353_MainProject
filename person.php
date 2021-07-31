@@ -10,15 +10,15 @@
 <?php include 'head.php'; ?>
 <?php include 'mysql_queries.php'; ?>
 
-<table>
-    <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Date of Birth</th>
-        <th>Age</th>
-        <th>Medicare Number</th>
-        <th>Phone</th>
-        <th>Email</th>
+<table class="default">
+    <tr class="default">
+        <th class="default">First Name</th>
+        <th class="default">Last Name</th>
+        <th class="default">Date of Birth</th>
+        <th class="default">Age</th>
+        <th class="default">Medicare Number</th>
+        <th class="default">Phone</th>
+        <th class="default">Email</th>
     </tr>
 
 <?php
@@ -46,19 +46,19 @@ $listPeople = [[
 
 foreach($listPeople as $person)
 {
-?>  <tr>
-        <td><?php print($person["fname"]); ?></td>
-        <td><?php print($person["lname"]); ?></td>
-        <td><?php print($person["date_of_birth"]); ?></td>
-        <td><?php print($person["age"]); ?></td>
-        <td><?php print($person["medicare_card_number"]); ?></td>
-        <td><?php print($person["telephone"]); ?></td>
-        <td><?php print($person["email"]); ?></td>
+?>  <tr class="default">
+        <td class="default"><?php print($person["fname"]); ?></td>
+        <td class="default"><?php print($person["lname"]); ?></td>
+        <td class="default"><?php print($person["date_of_birth"]); ?></td>
+        <td class="default"><?php print($person["age"]); ?></td>
+        <td class="default"><?php print($person["medicare_card_number"]); ?></td>
+        <td class="default"><?php print($person["telephone"]); ?></td>
+        <td class="default"><?php print($person["email"]); ?></td>
         
 <?php
     $detailsLink = "person_details.php?person=" . $person["person_id"];
     $editLink = "person_edit.php?person=" . $person["person_id"];
-?>      <td><a href="<?php print($detailsLink); ?>">Details</a> <a href="<?php print($editLink); ?>">Edit</a></td>
+?>      <td class="default"><a href="<?php print($detailsLink); ?>">Details</a> <a href="<?php print($editLink); ?>">Edit</a></td>
     </tr>
 <?php
 }
