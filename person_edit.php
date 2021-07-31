@@ -51,7 +51,7 @@ $person =
     </p>
     <p class="inForm">
         <label class="inForm" for="date_of_birth">Date of Birth: </label>
-        <input class="inForm" name="date_of_birth"  id="date_of_birth" type="text" value="<?php print($person["date_of_birth"]); ?>">
+        <input class="inForm" name="date_of_birth"  id="date_of_birth" type="date" value="<?php print($person["date_of_birth"]); ?>">
     </p>
     <p class="inForm">
         <label class="inForm" for="medicare_card_number">Medicare Card Number: </label>
@@ -74,7 +74,13 @@ $person =
         <input class="inForm" name="city"  id="city" type="text" value="<?php print($person["city"]); ?>">
     </p>
     <p class="inForm">
-        <label class="inForm" for="">Province: </label>
+        <label class="inForm" for="province">Province: </label>
+        
+        <select class="inForm" name="province" id="province">
+            <option value="QC" selected="selected">QC</option>
+            <option value="ON">ON</option>
+        </select>
+        
         <input class="inForm" name=""  id="" type="text" value="<?php print($person["province"]); ?>">
     </p>
     <p class="inForm">
