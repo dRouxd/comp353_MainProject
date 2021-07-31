@@ -1,17 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Person Edit</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
-<body>
-
-<?php include 'head.php'; ?>
 <?php include 'mysql_queries.php'; ?>
-
 <?php
-
 $person_id = $_GET["person"];
 
 if(array_key_exists("save", $_POST))
@@ -58,8 +46,17 @@ $provinces = [
     "YT"
 ]
 
-
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Person Edit</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<body>
+
+<?php include 'head.php'; ?>
 
 <form class="inForm" action="/person_edit.php?person=<?php print($person_id); ?>"  method="post">
     <input type="hidden" id="person_id" name="person_id" value="<?php print($person_id); ?>">
