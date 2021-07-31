@@ -14,6 +14,8 @@
 
 $person_id = $_GET["person"];
 
+print($_POST);
+
 $person = 
 [
     "person_id" => 2,
@@ -51,7 +53,7 @@ $provinces = [
 
 ?>
 
-<form class="inForm" action="/person_edit.php">
+<form class="inForm" action="/person_edit.php?person_id=<?php print($person_id); ?>"  method="post">
     <input type="hidden" id="person_id" name="person_id" value="<?php print($person_id); ?>">
     <p class="inForm">
         <label class="inForm" for="SSN">SSN: </label>
@@ -117,7 +119,7 @@ foreach($provinces as $p)
         <label class="inForm" for="citizenship">Citizenship: </label>
         <input class="inForm" name="citizenship"  id="citizenship" type="text" value="<?php print($person["citizenship"]); ?>">
     </p>
-    <input type="submit" value="Save"/>
+    <input type="submit" name="save" value="Save"/>
 </form>
 
 <?php include 'tail.php'; ?>
