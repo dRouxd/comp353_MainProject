@@ -64,16 +64,10 @@ body {
 }
 
 /* Forms style */
-.inForm {
-  width: 800px;
-  clear: both;
-}
-
-.inForm input {
-  width: 100%;
-  clear: both;
-}
-
+.inForm form  { display: table;      }
+.inForm p     { display: table-row;  }
+.inForm label { display: table-cell; }
+.inForm input { display: table-cell; }
 
 
 

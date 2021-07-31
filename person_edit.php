@@ -36,37 +36,16 @@ $person =
 
 ?>
 
-<div class="inForm">
-    <form>
-        <label>SSN</label>
-        <input type="text" name="SSN"/></br>
-        <label>First Name</label>
-        <input type="" name=""></input></br>
-        <label>Last Name</label>
-        <input type="" name=""></input></br>
-        <label>Date of Birth</label>
-        <input type="" name=""></input></br>
-        <label>Age</label>
-        <input type="" name=""></input></br>
-        <label>Medicare Card Number</label>
-        <input type="" name=""></input></br>
-        <label></label>
-        <input type="" name=""></input></br>
-        <label></label>
-        <input type="" name=""></input></br>
-        <label></label>
-        <input type="" name=""></input></br>
-        <label></label>
-        <input type="" name=""></input></br>
-        <label></label>
-        <input type="" name=""></input></br>
-        <label></label>
-        <input type="" name=""></input></br>
-        <label></label>
-        <input type="" name=""></input></br>
-        
-    </form>
-</div>
+<form class="inForm">
+    <p>
+        <label for="">SSN</label>
+        <input id="" type="text" value="test">
+    </p>
+    <p>
+        <label for="">Date of Birth</label>
+        <input id="" type="text" value="test">
+    </p>
+</form>
 
 <?php include 'tail.php'; ?>
 
