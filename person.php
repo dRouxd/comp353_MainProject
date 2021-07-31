@@ -19,7 +19,7 @@
         <td>Medicare Number</td>
         <td>Phone</td>
         <td>Email</td>
-        <td></td>
+        <td>Edit</td>
     </th>
 
 <?php
