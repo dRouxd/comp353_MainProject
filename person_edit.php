@@ -39,7 +39,7 @@ $person =
 <form class="inForm">
     <p class="inForm">
         <label class="inForm" for="SSN">SSN: </label>
-        <input class="inForm" name="SSN" id="SSN" type="text" value="<?php print($person["SSN"]); ?>">
+        <input class="inForm" name="SSN" id="SSN" type="text" value="<?php print($person["ssn"]); ?>">
     </p>
     <p class="inForm">
         <label class="inForm" for="fname">First Name: </label>
