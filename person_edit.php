@@ -69,8 +69,8 @@ $provinces = [
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
 <body>
-
 <?php include 'head.php'; ?>
+<a href="person_delete.php?person_id=<?php print($person_id); ?>">Delete</a>
 <h3>Details</h3>
 <form class="inForm" action="/person_edit.php?person=<?php print($person_id); ?>"  method="post">
     <input type="hidden" id="person_id" name="person_id" value="<?php print($person_id); ?>">
