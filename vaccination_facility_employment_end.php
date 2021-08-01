@@ -26,7 +26,7 @@ if($_GET["confirm"] == "true")
 <h3>Confirm</h3>
 
 <p>
-Are you sure you want to end this employment? <a href="vaccination_facility_employment_end.php?facility_id=<?php print($facility_id); ?>&eid=<?php print($eid); ?>&confirm=true">Yes</a> <a href="vaccination_facility_employment_end.php?facility_id=<?php print($facility_id); ?>&eid=<?php print($eid); ?>">No</a>
+Are you sure you want to end this employment? <a href="vaccination_facility_employment_end.php?facility_id=<?php print($facility_id); ?>&eid=<?php print($eid); ?>&confirm=true">Yes</a> <a href="vaccination_facility_edit.php?facility_id=<?php print($facility_id); ?>">No</a>
 </p>
 
 
