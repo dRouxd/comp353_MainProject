@@ -37,7 +37,6 @@ $listPeople = [[
 <form class="inForm" action="/health_worker_add.php"  method="post">
     <p class="inForm">
         <label class="inForm" for="person">Person: </label>
-        
         <select class="inForm" name="person" id="person">
 <?php
 foreach($listPeople as $p)
