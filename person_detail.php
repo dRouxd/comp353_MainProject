@@ -31,8 +31,8 @@ $vaccines =
 # TODO: Get infections from mysql
 $infections = 
 [
-["infection_id" => "1", "type" => "delta", "date_of_infection" => "2021-01-01"],
-["infection_id" => "2", "type" => "omega", "date_of_infection" => "2021-01-02"]
+["infection_id" => "1", "type" => "delta", "date_of_infection" => "2021-01-01", "infection_number" => "1"],
+["infection_id" => "2", "type" => "omega", "date_of_infection" => "2021-01-02", "infection_number" => "2"]
 ];
 
 ?>
@@ -135,6 +135,7 @@ foreach($vaccines as $vaccine)
 
 <table class="default">
     <tr class="default">
+        <th class="default">Infection Number</th>
         <th class="default">Type</th>
         <th class="default">Date of Infection</th>
     </tr>
@@ -143,6 +144,7 @@ foreach($infections as $infection)
 {
 ?>
     <tr class="default">
+        <td class="default"><?php print($infection["infection_number"]); ?></td>
         <td class="default"><?php print($infection["type"]); ?></td>
         <td class="default"><?php print($infection["date_of_infection"]); ?></td>
     </tr>

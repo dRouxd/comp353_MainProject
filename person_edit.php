@@ -39,8 +39,8 @@ $vaccines =
 # TODO: Get infections from mysql
 $infections = 
 [
-["infection_id" => "1", "type" => "delta", "date_of_infection" => "2021-01-01"],
-["infection_id" => "2", "type" => "omega", "date_of_infection" => "2021-01-02"]
+["infection_id" => "1", "type" => "delta", "date_of_infection" => "2021-01-01", "infection_number" => "1"],
+["infection_id" => "2", "type" => "omega", "date_of_infection" => "2021-01-02", "infection_number" => "2"]
 ];
 
 # TODO: Get provinces from Mysql
@@ -163,7 +163,6 @@ foreach($vaccines as $vaccine)
         <td class="default"><a href="vaccine_detail.php?vaccine_id=<?php print($vaccine["vaccine_id"]); ?>"><?php print($vaccine["brand"]); ?></a></td>
         <td class="default"><a href="person_detail.php?person_id=<?php print($vaccine["eid"]); ?>"><?php print($vaccine["name"]); ?></a></td>
         <td class="default"><a href="vaccination_facility.php?facility_id=<?php print($vaccine["facility_id"]); ?>"><?php print($vaccine["facility_name"]); ?></a></td>
-        <td class="default"><a href="person_vaccination_edit.php?vaccination_id=<?php print($vaccine["vaccination_id"]); ?>">Edit</a></td>
     </tr>
 <?php   
 }
@@ -177,6 +176,7 @@ foreach($vaccines as $vaccine)
 
 <table class="default">
     <tr class="default">
+        <th class="default">Infection Number</th>
         <th class="default">Type</th>
         <th class="default">Infection Date</th>
     </tr>
@@ -185,6 +185,7 @@ foreach($infections as $infection)
 {
 ?>
     <tr class="default">
+        <td class="default"><?php print($infection["infection_number"]); ?></td>
         <td class="default"><?php print($infection["type"]); ?></td>
         <td class="default"><?php print($infection["date_of_infection"]); ?></td>
         <td class="default"><a href="person_infection_edit.php?infection_id=<?php print($infection["infection_id"]); ?>">Edit</a></td>
