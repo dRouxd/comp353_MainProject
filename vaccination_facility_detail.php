@@ -134,8 +134,8 @@ foreach($employment as $e)
 {
 ?>
     <tr class="default">
-        <td class="default"><a href="health_worker_detail.php?eid=<?php print($e["eid"]); ?>"><?php print($e["eid"]); ?></a></td>
-        <td class="default"><?php print($e["name"]); ?></td>
+        <td class="default"><?php print($e["eid"]); ?></td>
+        <td class="default"><a href="health_worker_detail.php?eid=<?php print($e["eid"]); ?>"><?php print($e["name"]); ?></a></td>
         <td class="default"><?php print($e["start_date"]); ?></td>
     </tr>
 <?php   
