@@ -144,7 +144,7 @@ foreach($vaccineInv as $inv)
 ?>
 </table>
 <p>
-<a href="vaccination_facility_inventory_add.php?person_id=<?php print($person_id); ?>">Add Vaccine Inventory</a>
+<a href="vaccination_facility_inventory_add.php?facility_id=<?php print($facility_id); ?>">Add Vaccine Inventory</a>
 </p>
 
 <h3>Employment</h3>
