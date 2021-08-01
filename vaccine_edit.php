@@ -22,7 +22,8 @@ $vaccine =
 # TODO: Get history received from mysql
 $histories = 
 [
-
+    ["status" => "TESTING", "approved_date" => "2021-01-01", "end_date" => "2021-03-01"],
+    ["status" => "APPROVED", "approved_date" => "2021-03-01", "end_date" => "null"]
 ];
 
 ?>
@@ -37,7 +38,7 @@ $histories =
 
 <?php include 'head.php'; ?>
 <h3>Details</h3>
-<form class="inForm" action="/person_edit.php?person=<?php print($person_id); ?>"  method="post">
+<form class="inForm" action="/vaccine_edit.php?person=<?php print($person_id); ?>"  method="post">
     <input type="hidden" id="person_id" name="person_id" value="<?php print($person_id); ?>">
     <p class="inForm">
         <label class="inForm" for="brand">Brand: </label>
