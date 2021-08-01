@@ -1,7 +1,7 @@
 <?php include 'mysql_queries.php'; ?>
 <?php
 
-$vaccine_id = $_GET["vaccine_id"];
+$eid = $_GET["eid"];
 $facility_id = $_GET["facility_id"];
 
 if($_GET["confirm"] == "true")
@@ -17,7 +17,7 @@ if($_GET["confirm"] == "true")
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Delete Vaccine Inventory</title>
+<title>End Employment</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
@@ -26,7 +26,7 @@ if($_GET["confirm"] == "true")
 <h3>Confirm</h3>
 
 <p>
-Are you sure you want to delete this vaccine inventory? <a href="vaccination_facility_inventory_delete.php?facility_id=<?php print($facility_id); ?>&vaccine_id=<?php print($person_id); ?>&confirm=true">Yes</a> <a href="vaccination_facility_inventory_edit.php?facility_id=<?php print($facility_id); ?>&vaccine_id=<?php print($vaccine_id); ?>">No</a>
+Are you sure you want to end this employment? <a href="vaccination_facility_employment_end.php?facility_id=<?php print($facility_id); ?>&eid=<?php print($eid); ?>&confirm=true">Yes</a> <a href="vaccination_facility_employment_end.php?facility_id=<?php print($facility_id); ?>&eid=<?php print($eid); ?>">No</a>
 </p>
 
 
