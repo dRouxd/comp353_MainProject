@@ -7,7 +7,7 @@ if(array_key_exists("save", $_POST))
 {
     #TODO: Send the updated data to the mysql
     
-    header("Location: vaccination_facility_detail.php?facility_id=" . $facility_id);
+    header("Location: vaccination_facility_edit.php?facility_id=" . $facility_id);
     die();
 }
 
