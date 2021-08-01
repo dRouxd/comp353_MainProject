@@ -35,9 +35,9 @@ $listVaccine = [[
 foreach($listVaccine as $vaccine)
 {
 ?>  <tr class="default">
-        <td class="default"><?php print($person["brand"]); ?></td>
-        <td class="default"><?php print($person["current_status"]); ?></td>
-        <td class="default"><?php print($person["description"]); ?></td>
+        <td class="default"><?php print($vaccine["brand"]); ?></td>
+        <td class="default"><?php print($vaccine["current_status"]); ?></td>
+        <td class="default"><?php print($vaccine["description"]); ?></td>
         <td class="default"><a href="vaccine_detail.php?vaccine_id=<?php print($vaccine["vaccine_id"]); ?>">Detail</a> <a href="vaccine_edit.php?vaccine_id=<?php print($vaccine["vaccine_id"]); ?>">Edit</a></td>
     </tr>
 <?php
