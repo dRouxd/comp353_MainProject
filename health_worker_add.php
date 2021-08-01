@@ -1,10 +1,11 @@
 <?php include 'mysql_queries.php'; ?>
 <?php
-$eid = $_GET["eid"];
 
 if(array_key_exists("save", $_POST))
 {
-    #TODO: Send the new vaccination to the database
+    #TODO: Send the new health worker to the database and get the eid back
+    
+    $eid = 1;
     
     header("Location: health_worker_edit.php?eid=" . $eid);
     die();
@@ -33,7 +34,7 @@ $listPeople = [[
 <?php include 'head.php'; ?>
 
 <h3>Health Worker Details</h3>
-<form class="inForm" action="/health_worker_add.php?eid=<?php print($eid); ?>"  method="post">
+<form class="inForm" action="/health_worker_add.php"  method="post">
     <p class="inForm">
         <label class="inForm" for="person">Person: </label>
         
