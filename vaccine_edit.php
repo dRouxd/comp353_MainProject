@@ -37,7 +37,10 @@ $histories =
 <body>
 <?php include 'head.php'; ?>
 
+<p>
 <a href="vaccine_delete.php?vaccine_id=<?php print($vaccine_id); ?>">Delete</a>
+</p>
+
 <h3>Edit Details</h3>
 <form class="inForm" action="/vaccine_edit.php?vaccine_id=<?php print($vaccine_id); ?>"  method="post">
     <p class="inForm">
@@ -71,7 +74,9 @@ foreach($histories as $history)
 }
 ?>
 </table>
+<p>
 <a href="vaccine_history_add.php?vaccine_id=<?php print($vaccine_id); ?>">Add History</a>
+</p>
 
 <?php include 'tail.php'; ?>
 

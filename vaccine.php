@@ -45,8 +45,9 @@ foreach($listVaccine as $vaccine)
 
 ?>
 </table>
+<p>
 <a href="vaccine_add.php">Add Vaccine</a>
-
+</p>
 <?php include 'tail.php'; ?>
 
 

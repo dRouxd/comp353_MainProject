@@ -29,7 +29,9 @@ $histories =
 <body>
 <?php include 'head.php'; ?>
 
+<p>
 <a href="vaccine_edit.php?vaccine_id=<?php print($vaccine_id); ?>">Edit</a>
+</p>
 <h3>Details</h3>
 
 <table class="default">
