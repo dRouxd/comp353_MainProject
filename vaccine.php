@@ -1,3 +1,20 @@
+<?php include 'mysql_queries.php'; ?>
+<?php
+$listVaccine = [
+    [
+        "vaccine_id" => 1,
+        "brand" => "moderna",
+        "current_status" => "APPROVED",
+        "description" => "moderna description"
+    ],
+    [
+        "vaccine_id" => 2,
+        "brand" => "pfizer",
+        "current_status" => "APPROVED",
+        "description" => "pfizer description"
+    ]
+];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +25,6 @@
 <body>
 
 <?php include 'head.php'; ?>
-<?php include 'mysql_queries.php'; ?>
 
 <table class="default">
     <tr class="default">
@@ -18,20 +34,6 @@
     </tr>
 
 <?php
-
-$listVaccine = [[
-    "vaccine_id" => 1,
-    "brand" => "moderna",
-    "current_status" => "APPROVED",
-    "description" => "moderna description"
-],
-[
-    "vaccine_id" => 2,
-    "brand" => "pfizer",
-    "current_status" => "APPROVED",
-    "description" => "pfizer description"
-]];
-
 foreach($listVaccine as $vaccine)
 {
 ?>  <tr class="default">
