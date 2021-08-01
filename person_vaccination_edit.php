@@ -48,9 +48,9 @@ $HSOs = [
 <body>
 <?php include 'head.php'; ?>
 
-<a href="person_vaccination_delete.php?person_id=<?php print($person_id); ?>">Delete</a>
+<a href="person_vaccination_delete.php?vaccination_id=<?php print($vaccination_id); ?>">Delete</a>
 <h3>Edit Details</h3>
-<form class="inForm" action="/person_vaccination_edit.php?vaccination_id=<?php print($person_id); ?>"  method="post">
+<form class="inForm" action="/person_vaccination_edit.php?vaccination_id=<?php print($vaccination_id); ?>"  method="post">
     <p class="inForm">
         <label class="inForm" for="vaccination_date">Vaccination Date: </label>
         <input class="inForm" name="vaccination_date"  id="vaccination_date" type="date" value="<?php print($vaccination["vaccination_date"]); ?>">
