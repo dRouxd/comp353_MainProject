@@ -53,51 +53,24 @@ $histories =
 <h3>History</h3>
 <table class="default">
     <tr class="default">
-        <th class="default">Dose Number</th>
-        <th class="default">Vaccination Date</th>
-        <th class="default">Brand</th>
-        <th class="default">Employee Name</th>
-        <th class="default">HSO Location</th>
+        <th class="default">Status</th>
+        <th class="default">Approved Date</th>
+        <th class="default">End Date</th>
     </tr>
 <?php
-foreach($vaccines as $vaccine)
+foreach($histories as $history)
 {
 ?>
     <tr class="default">
-        <td class="default"><?php print($vaccine["dose_number"]); ?></td>
-        <td class="default"><?php print($vaccine["vaccination_date"]); ?></td>
-        <td class="default"><a href="vaccine_detail.php?vaccine_id=<?php print($vaccine["vaccine_id"]); ?>"><?php print($vaccine["brand"]); ?></a></td>
-        <td class="default"><a href="person_detail.php?person_id=<?php print($vaccine["eid"]); ?>"><?php print($vaccine["name"]); ?></a></td>
-        <td class="default"><a href="hso_detail.php?facility_id=<?php print($vaccine["facility_id"]); ?>"><?php print($vaccine["facility_name"]); ?></a></td>
-        <td class="default"><a href="vaccination_edit.php?vaccination_id=<?php print($vaccine["vaccination_id"]); ?>">Edit</a></td>
+        <td class="default"><?php print($history["status"]); ?></td>
+        <td class="default"><?php print($history["approved_date"]); ?></td>
+        <td class="default"><?php print($history["end_date"]); ?></td>
     </tr>
 <?php   
 }
 ?>
 </table>
-<a href="add_vaccination.php?person_id=<?php print($person_id); ?>">Add Vaccination</a>
-
-<h3>Infections</h3>
-
-<table class="default">
-    <tr class="default">
-        <th class="default">Type</th>
-        <th class="default">Date of Infection</th>
-    </tr>
-<?php
-foreach($infections as $infection)
-{
-?>
-    <tr class="default">
-        <td class="default"><?php print($infection["type"]); ?></td>
-        <td class="default"><?php print($infection["date_of_infection"]); ?></td>
-        <td class="default"><a href="infection_edit.php?infection_id=<?php print($infection["infection_id"]); ?>">Edit</a></td>
-    </tr>
-<?php   
-}
-?>
-</table>
-<a href="add_infection.php?person_id=<?php print($person_id); ?>">Add Infection</a>
+<a href="add_vaccine_history.php?vaccine_id=<?php print($person_id); ?>">Add History</a>
 
 <?php include 'tail.php'; ?>
 
