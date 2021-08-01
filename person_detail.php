@@ -46,7 +46,9 @@ $infections =
 <body>
 
 <?php include 'head.php'; ?>
+<p>
 <a href="person_edit.php?person_id=<?php print($person_id); ?>">Edit</a>
+</p>
 
 <h3>Details</h3>
 <table class="default">

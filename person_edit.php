@@ -71,7 +71,10 @@ $provinces = [
 <body>
 <?php include 'head.php'; ?>
 
+<p>
 <a href="person_delete.php?person_id=<?php print($person_id); ?>">Delete</a>
+</p>
+
 <h3>Edit Details</h3>
 <form class="inForm" action="/person_edit.php?person_id=<?php print($person_id); ?>"  method="post">
     <p class="inForm">
@@ -166,7 +169,9 @@ foreach($vaccines as $vaccine)
 }
 ?>
 </table>
+<p>
 <a href="person_vaccination_add.php?person_id=<?php print($person_id); ?>">Add Vaccination</a>
+</p>
 
 <h3>Infections</h3>
 
@@ -188,7 +193,9 @@ foreach($infections as $infection)
 }
 ?>
 </table>
+<p>
 <a href="person_infection_add.php?person_id=<?php print($person_id); ?>">Add Infection</a>
+</p>
 
 <?php include 'tail.php'; ?>
 
