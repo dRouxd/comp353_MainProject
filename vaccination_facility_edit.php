@@ -137,14 +137,14 @@ foreach($vaccineInv as $inv)
         <td class="default"><?php print($inv["description"]); ?></td>
         <td class="default"><?php print($inv["reception_date"]); ?></td>
         <td class="default"><?php print($inv["available_dose"]); ?></td>
-        <td class="default"><a href="vaccination_facility_inventory_edit.php?facility_id=<?php print($facility_id); ?>&vaccine_id=<?php print($inv["vaccine_id"]); ?>">Edit</a> <a href="vaccination_facility_inventory_delete.php?facility_id=<?php print($facility_id); ?>&vaccine_id=<?php print($vaccine["vaccine_id"]); ?>">Delete</a> <a href="vaccination_facility_inventory_transfer.php?facility_id=<?php print($facility_id); ?>&vaccine_id=<?php print($vaccine["vaccine_id"]); ?>">Transfer To</a></td>
+        <td class="default"><a href="vaccination_facility_inventory_edit.php?facility_id=<?php print($facility_id); ?>&vaccine_id=<?php print($inv["vaccine_id"]); ?>">Edit</a> <a href="vaccination_facility_inventory_transfer.php?facility_id=<?php print($facility_id); ?>&vaccine_id=<?php print($vaccine["vaccine_id"]); ?>">Transfer To</a></td>
     </tr>
 <?php   
 }
 ?>
 </table>
 <p>
-<a href="vaccination_facility_inventory_add.php?person_id=<?php print($person_id); ?>">Add Vaccine</a>
+<a href="vaccination_facility_inventory_add.php?person_id=<?php print($person_id); ?>">Add Vaccine Inventory</a>
 </p>
 
 <h3>Employment</h3>
