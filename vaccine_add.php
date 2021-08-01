@@ -5,8 +5,8 @@ if(array_key_exists("save", $_POST))
 {
     #TODO: Send the new vaccine data to the mysql and get id back
     
-    $person_id = 1;
-    header("Location: vaccine_edit.php?vaccine_id=" . $person_id);
+    $vaccine_id = 1;
+    header("Location: vaccine_edit.php?vaccine_id=" . $vaccine_id);
     die();
 }
 

@@ -71,7 +71,7 @@ foreach($histories as $history)
 }
 ?>
 </table>
-<a href="add_vaccine_history.php?vaccine_id=<?php print($person_id); ?>">Add History</a>
+<a href="vaccine_history_add.php?vaccine_id=<?php print($vaccine_id); ?>">Add History</a>
 
 <?php include 'tail.php'; ?>
 
