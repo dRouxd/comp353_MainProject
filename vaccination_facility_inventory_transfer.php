@@ -14,7 +14,7 @@ if(array_key_exists("save", $_POST))
 $facility = 
 [
     "name" => "CHUM"
-]
+];
 
 $facilities = [
     [
