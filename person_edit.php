@@ -188,7 +188,7 @@ foreach($infections as $infection)
 }
 ?>
 </table>
-<a href="add_infection.php?person_id=<?php print($person_id); ?>">Add Infection</a>
+<a href="person_infection_add.php?person_id=<?php print($person_id); ?>">Add Infection</a>
 
 <?php include 'tail.php'; ?>
 
