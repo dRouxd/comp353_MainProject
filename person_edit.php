@@ -173,7 +173,7 @@ foreach($vaccines as $vaccine)
 <table class="default">
     <tr class="default">
         <th class="default">Type</th>
-        <th class="default">Date of Infection</th>
+        <th class="default">Infection Date</th>
     </tr>
 <?php
 foreach($infections as $infection)
@@ -182,7 +182,7 @@ foreach($infections as $infection)
     <tr class="default">
         <td class="default"><?php print($infection["type"]); ?></td>
         <td class="default"><?php print($infection["date_of_infection"]); ?></td>
-        <td class="default"><a href="infection_edit.php?infection_id=<?php print($infection["infection_id"]); ?>">Edit</a></td>
+        <td class="default"><a href="person_infection_edit.php?infection_id=<?php print($infection["infection_id"]); ?>">Edit</a></td>
     </tr>
 <?php   
 }
