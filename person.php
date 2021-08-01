@@ -56,7 +56,7 @@ foreach($listPeople as $person)
         <td class="default"><?php print($person["medicare_card_number"]); ?></td>
         <td class="default"><?php print($person["telephone"]); ?></td>
         <td class="default"><?php print($person["email"]); ?></td>
-        <td class="default"><a href="person_detail.php?person_id=<?php print($person_id); ?>">Details</a> <a href="person_edit.php?person_id=<?php print($person_id); ?>">Edit</a></td>
+        <td class="default"><a href="person_detail.php?person_id=<?php print($person["person_id"]); ?>">Details</a> <a href="person_edit.php?person_id=<?php print($person["person_id"]); ?>">Edit</a></td>
     </tr>
 <?php
 }
