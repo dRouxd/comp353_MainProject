@@ -62,7 +62,7 @@ $HSOs = [
 <?php
 foreach($vaccines as $v)
 {
-    if($v["vaccine_id"] == $vaccination["vaccine_id")
+    if($v["vaccine_id"] == $vaccination["vaccine_id"])
     {
 ?>           <option value="<?php print($v["vaccine_id"]); ?>" selected="selected"><?php print($v["brand"]); ?></option>
 <?php
