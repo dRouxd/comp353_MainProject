@@ -50,7 +50,7 @@ foreach($histories as $history)
 {
 ?>
     <tr class="default">
-        <td class="default"><a href="hso_detail.php?facility_id=<?php print($history["facility_id"]); ?>"><?php print($history["name"]); ?></a></td>
+        <td class="default"><a href="vaccination_facility.php?facility_id=<?php print($history["facility_id"]); ?>"><?php print($history["name"]); ?></a></td>
         <td class="default"><?php print($history["start_date"]); ?></td>
         <td class="default"><?php print($history["end_date"]); ?></td>
     </tr>
