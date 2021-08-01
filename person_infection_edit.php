@@ -6,7 +6,7 @@ if(array_key_exists("save", $_POST))
 {
     #TODO: Send the updated data to the mysql
     
-    # TODO: Get the person if using the infection id
+    # TODO: Get the person id using the infection id
     
     $person_id = "1";
     header("Location: person_edit.php?person_id=" . $person_id);
@@ -29,7 +29,7 @@ $infection = ["infection_id" => "1", "type" => "delta", "date_of_infection" => "
 <?php include 'head.php'; ?>
 
 <h3>Edit Details</h3>
-<form class="inForm" action="/person_vaccination_edit.php?infection_id=<?php print($infection_id); ?>"  method="post">
+<form class="inForm" action="/person_infection_edit.php?infection_id=<?php print($infection_id); ?>"  method="post">
     <p class="inForm">
         <label class="inForm" for="type">Type: </label>
         <input class="inForm" name="type"  id="type" type="text" value="<?php print($infection["type"]); ?>">
