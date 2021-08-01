@@ -40,7 +40,7 @@ $HSOs = [
 <?php include 'head.php'; ?>
 
 <h3>Vaccination Details</h3>
-<form class="inForm" action="/person_edit.php?person_id=<?php print($person_id); ?>"  method="post">
+<form class="inForm" action="/person_vaccination_add.php?person_id=<?php print($person_id); ?>"  method="post">
     <p class="inForm">
         <label class="inForm" for="vaccination_date">Vaccination Date: </label>
         <input class="inForm" name="vaccination_date"  id="vaccination_date" type="date">
