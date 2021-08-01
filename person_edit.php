@@ -70,6 +70,7 @@ $provinces = [
 <link rel="stylesheet" href="style.css">
 <body>
 <?php include 'head.php'; ?>
+
 <a href="person_delete.php?person_id=<?php print($person_id); ?>">Delete</a>
 <h3>Edit Details</h3>
 <form class="inForm" action="/person_edit.php?person_id=<?php print($person_id); ?>"  method="post">

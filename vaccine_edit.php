@@ -35,8 +35,9 @@ $histories =
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
 <body>
-
 <?php include 'head.php'; ?>
+
+<a href="vaccine_delete.php?vaccine_id=<?php print($vaccine_id); ?>">Delete</a>
 <h3>Edit Details</h3>
 <form class="inForm" action="/vaccine_edit.php?vaccine_id=<?php print($vaccine_id); ?>"  method="post">
     <p class="inForm">
