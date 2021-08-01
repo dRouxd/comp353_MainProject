@@ -1,14 +1,13 @@
 <?php include 'mysql_queries.php'; ?>
 <?php
 
-$vaccine_id = $_GET["vaccine_id"];
+$eid = $_GET["eid"];
 
 if($_GET["confirm"] == "true")
 {
     #TODO: send the request to mysql to delete vaccine_id
     
-    $person_id = 1;
-    header("Location: vaccine.php");
+    header("Location: health_worker.php");
     die();
 }
 
@@ -17,7 +16,7 @@ if($_GET["confirm"] == "true")
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Delete Vaccine</title>
+<title>Delete Health Worker</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
@@ -26,7 +25,7 @@ if($_GET["confirm"] == "true")
 <h3>Confirm</h3>
 
 <p>
-Are you sure you want to delete this vaccine? <a href="vaccine_delete.php?vaccine_id=<?php print($person_id); ?>&confirm=true">Yes</a> <a href="vaccine_edit.php?vaccine_id=<?php print($vaccine_id); ?>">No</a>
+Are you sure you want to delete this health worker? <a href="health_worker_delete.php?eid=<?php print($person_id); ?>&confirm=true">Yes</a> <a href="health_worker_edit.php?eid=<?php print($eid); ?>">No</a>
 </p>
 
 
