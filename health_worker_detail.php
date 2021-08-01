@@ -33,7 +33,7 @@ $histories = [
 <table class="default">
     <tr class="default">
         <th class="default">Is Manager</th>
-        <td class="default"><?php print($healthWorker["isManager"] ? Yes : No); ?></td>
+        <td class="default"><?php print($healthWorker["isManager"] ? "Yes" : "No"); ?></td>
     </tr>
 </table>
 
