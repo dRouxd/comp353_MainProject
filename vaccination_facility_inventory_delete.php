@@ -27,7 +27,7 @@ if($_GET["confirm"] == "true")
 <h3>Confirm</h3>
 
 <p>
-Are you sure you want to delete this vaccine inventory? <a href="vaccination_facility_inventory_delete.php?facility_id=<?php print($facility_id); ?>&vaccine_id=<?php print($person_id); ?>&confirm=true">Yes</a> <a href="vaccination_facility_inventory_delete.php?facility_id=<?php print($facility_id); ?>&vaccine_id=<?php print($vaccine_id); ?>">No</a>
+Are you sure you want to delete this vaccine inventory? <a href="vaccination_facility_inventory_delete.php?facility_id=<?php print($facility_id); ?>&vaccine_id=<?php print($person_id); ?>&confirm=true">Yes</a> <a href="vaccination_facility_inventory_edit.php?facility_id=<?php print($facility_id); ?>&vaccine_id=<?php print($vaccine_id); ?>">No</a>
 </p>
 
 
