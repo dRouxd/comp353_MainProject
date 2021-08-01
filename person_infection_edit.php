@@ -28,7 +28,6 @@ $infection = ["infection_id" => "1", "type" => "delta", "date_of_infection" => "
 <body>
 <?php include 'head.php'; ?>
 
-<a href="person_infection_delete.php?infection_id=<?php print($infection_id); ?>">Delete</a>
 <h3>Edit Details</h3>
 <form class="inForm" action="/person_vaccination_edit.php?infection_id=<?php print($infection_id); ?>"  method="post">
     <p class="inForm">
