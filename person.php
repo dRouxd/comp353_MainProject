@@ -63,7 +63,7 @@ foreach($listPeople as $person)
 
 ?>
 </table>
-<a href="add_person.php">Add Person</a>
+<a href="person_add.php">Add Person</a>
 
 
 <?php test(); ?>
