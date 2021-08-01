@@ -1,12 +1,12 @@
 <?php include 'mysql_queries.php'; ?>
 <?php
-$person_id = $_GET["person_id"];
+$vaccine_id = $_GET["vaccine_id"];
 
 if(array_key_exists("save", $_POST))
 {
     #TODO: Send the updated data to the mysql
     
-    header("Location: vaccine_detail.php?person_id=" . $person_id);
+    header("Location: vaccine_detail.php?vaccine_id=" . $vaccine_id);
     die();
 }
 
@@ -37,9 +37,8 @@ $histories =
 <body>
 
 <?php include 'head.php'; ?>
-<h3>Details</h3>
-<form class="inForm" action="/vaccine_edit.php?person=<?php print($person_id); ?>"  method="post">
-    <input type="hidden" id="person_id" name="person_id" value="<?php print($person_id); ?>">
+<h3>Edit Details</h3>
+<form class="inForm" action="/vaccine_edit.php?vaccine_id=<?php print($vaccine_id); ?>"  method="post">
     <p class="inForm">
         <label class="inForm" for="brand">Brand: </label>
         <input class="inForm" name="brand" id="brand" type="brand" value="<?php print($vaccine["brand"]); ?>">

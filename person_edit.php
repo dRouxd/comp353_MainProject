@@ -71,9 +71,8 @@ $provinces = [
 <body>
 <?php include 'head.php'; ?>
 <a href="person_delete.php?person_id=<?php print($person_id); ?>">Delete</a>
-<h3>Details</h3>
-<form class="inForm" action="/person_edit.php?person=<?php print($person_id); ?>"  method="post">
-    <input type="hidden" id="person_id" name="person_id" value="<?php print($person_id); ?>">
+<h3>Edit Details</h3>
+<form class="inForm" action="/person_edit.php?person_id=<?php print($person_id); ?>"  method="post">
     <p class="inForm">
         <label class="inForm" for="SSN">SSN: </label>
         <input class="inForm" name="SSN" id="SSN" type="text" value="<?php print($person["ssn"]); ?>">
