@@ -52,7 +52,7 @@ $provinces = [
         <label class="inForm" for="province">Province: </label>
         <select class="inForm" name="province" id="province">
 <?php
-foreach($province as $p)
+foreach($provinces as $p)
 {
 ?>           <option value="<?php print($p); ?>"><?php print($p); ?></option>
 <?php
