@@ -3,10 +3,11 @@
 
 $vaccination_id = $_GET["vaccination_id"];
 
+#TODO: Get the person_id using vaccination_id
+$person_id = "1";
+
 if($_GET["confirm"] == "true")
 {
-    #TODO: Get the person_id before deleting the vaccination
-    $person_id = "1";
     
     #TODO: send the request to mysql to delete vaccination_id
     
@@ -28,7 +29,7 @@ if($_GET["confirm"] == "true")
 <h3>Confirm</h3>
 
 <p>
-Are you sure you want to delete this vaccination? <a href="person_vaccination_delete.php?vaccination_id=<?php print($vaccination_id); ?>&confirm=true">Yes</a> <a href="person_vaccination_delete.php?vaccination_id=<?php print($vaccination_id); ?>">No</a>
+Are you sure you want to delete this vaccination? <a href="person_vaccination_delete.php?vaccination_id=<?php print($vaccination_id); ?>&confirm=true">Yes</a> <a href="person_edit.php?person_id=<?php print($person_id); ?>">No</a>
 </p>
 
 
