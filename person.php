@@ -1,26 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Person</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
-<body>
-
-<?php include 'head.php'; ?>
 <?php include 'mysql_queries.php'; ?>
-
-<table class="default">
-    <tr class="default">
-        <th class="default">First Name</th>
-        <th class="default">Last Name</th>
-        <th class="default">Date of Birth</th>
-        <th class="default">Age</th>
-        <th class="default">Medicare Number</th>
-        <th class="default">Phone</th>
-        <th class="default">Email</th>
-    </tr>
-
 <?php
 
 $listPeople = [[
@@ -44,6 +22,30 @@ $listPeople = [[
     "email" => "johnny.smithy@gmail.com"
 ]];
 
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Person</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<body>
+<?php include 'head.php'; ?>
+<h3>Person</h3>
+<table class="default">
+    <tr class="default">
+        <th class="default">First Name</th>
+        <th class="default">Last Name</th>
+        <th class="default">Date of Birth</th>
+        <th class="default">Age</th>
+        <th class="default">Medicare Number</th>
+        <th class="default">Phone</th>
+        <th class="default">Email</th>
+    </tr>
+
+<?php
+
 foreach($listPeople as $person)
 {
 ?>  <tr class="default">
@@ -60,8 +62,9 @@ foreach($listPeople as $person)
 }
 
 ?>
-
 </table>
+<a href="add_person.php">Add Person</a>
+
 
 <?php test(); ?>
 
