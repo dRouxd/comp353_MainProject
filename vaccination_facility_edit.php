@@ -159,7 +159,7 @@ foreach($employment as $e)
 {
 ?>
     <tr class="default">
-        <td class="default"><?php print($e["eid"]); ?></td>
+        <td class="default"><a href="health_worker_detail.php?eid=<?php print($e["eid"]); ?>"><?php print($e["eid"]); ?></a></td>
         <td class="default"><?php print($e["name"]); ?></td>
         <td class="default"><?php print($e["start_date"]); ?></td>
         <td class="default"><a href="vaccination_facility_employment_edit.php?facility_id=<?php print($facility_id); ?>&eid=<?php print($e["eid"]); ?>">Edit</a></td>
