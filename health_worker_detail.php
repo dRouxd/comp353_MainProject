@@ -26,14 +26,14 @@ $histories = [
 <?php include 'head.php'; ?>
 
 <p>
-<a href="person_detail.php?person_id=<?php print($healthWorker["person_id"]); ?>">Person Detail</a><a href="health_worker_edit.php?eid=<?php print($eid); ?>">Edit</a>
+<a href="person_detail.php?person_id=<?php print($healthWorker["person_id"]); ?>">Person Detail</a> <a href="health_worker_edit.php?eid=<?php print($eid); ?>">Edit</a>
 </p>
 <h3>Details</h3>
 
 <table class="default">
     <tr class="default">
         <th class="default">Is Manager</th>
-        <td class="default"><?php print($healthWorker["isManager"]); ?></td>
+        <td class="default"><?php print($healthWorker["isManager"] ? Yes : No); ?></td>
     </tr>
 </table>
 
