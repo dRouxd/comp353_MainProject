@@ -52,10 +52,10 @@ $vaccineInv =
     ["vaccine_id" => "2", "brand" => "pfizer", "status" => "APPROVED", "description" => "pfizer vaccine", "reception_date" => "2021-05-01", "available_dose" => "69"]
 ];
 
-$employmentHistory =
+$employment =
 [
     ["eid" => "1", "name" => "Matilda Grouch", "start_date" => "2021-01-02"],
-    ["eid" => "2", "name" => "Matilda Grouch", "start_date" => "2021-01-02"]
+    ["eid" => "2", "name" => "Joe Beau", "start_date" => "2021-01-02"]
 ];
 
 ?>
@@ -144,11 +144,10 @@ foreach($vaccineInv as $inv)
 ?>
 </table>
 <p>
-<a href="vaccination_facility_inventory_add.php?person_id=<?php print($person_id); ?>">Add Vaccination</a>
+<a href="vaccination_facility_inventory_add.php?person_id=<?php print($person_id); ?>">Add Vaccine</a>
 </p>
 
 <h3>Employment</h3>
-
 <table class="default">
     <tr class="default">
         <th class="default">Employee ID</th>
@@ -156,20 +155,21 @@ foreach($vaccineInv as $inv)
         <th class="default">Start Date</th>
     </tr>
 <?php
-foreach($infections as $infection)
+foreach($employment as $e)
 {
 ?>
     <tr class="default">
-        <td class="default"><?php print($infection["type"]); ?></td>
-        <td class="default"><?php print($infection["date_of_infection"]); ?></td>
-        <td class="default"><a href="person_infection_edit.php?infection_id=<?php print($infection["infection_id"]); ?>">Edit</a></td>
+        <td class="default"><?php print($e["eid"]); ?></td>
+        <td class="default"><?php print($e["name"]); ?></td>
+        <td class="default"><?php print($e["start_date"]); ?></td>
+        <td class="default"><a href="vaccination_facility_employment_edit.php?facility_id=<?php print($facility_id); ?>&eid=<?php print($e["eid"]); ?>">Edit</a></td>
     </tr>
 <?php   
 }
 ?>
 </table>
 <p>
-<a href="person_infection_add.php?person_id=<?php print($person_id); ?>">Add Infection</a>
+<a href="vaccination_facility_employment_add.php?facility_id=<?php print($facility_id); ?>">Add Employment</a>
 </p>
 
 <?php include 'tail.php'; ?>
