@@ -28,7 +28,7 @@ $histories = [
 <p>
 <a href="person_detail.php?person_id=<?php print($healthWorker["person_id"]); ?>">Person Detail</a> <a href="health_worker_edit.php?eid=<?php print($eid); ?>">Edit</a>
 </p>
-<h3>Details</h3>
+<h3>Details of <?php print($healthWorker["name"]); ?></h3>
 
 <table class="default">
     <tr class="default">

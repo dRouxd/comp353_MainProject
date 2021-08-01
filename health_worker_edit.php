@@ -36,7 +36,7 @@ $histories = [
 <p>
 <a href="person_edit.php?person_id=<?php print($healthWorker["person_id"]); ?>">Person Edit</a> <a href="health_worker_delete.php?eid=<?php print($eid); ?>">Delete</a>
 </p>
-<h3>Edit</h3>
+<h3>Edit <?php print($healthWorker["name"]); ?></h3>
 <form class="inForm" action="/person_edit.php?person_id=<?php print($person_id); ?>"  method="post">
     <p class="inForm">
         <label class="inForm" for="isManager">Is Manager: </label>

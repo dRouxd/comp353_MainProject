@@ -23,9 +23,9 @@ $listVaccine = [
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
 <body>
-
 <?php include 'head.php'; ?>
 
+<h3>Vaccine</h3>
 <table class="default">
     <tr class="default">
         <th class="default">Brand</th>

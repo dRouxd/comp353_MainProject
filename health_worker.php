@@ -14,9 +14,8 @@ $healthWorkers = [
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
 <body>
-
 <?php include 'head.php'; ?>
-
+<h3>Health Worker</h3>
 <table class="default">
     <tr class="default">
         <th class="default">Employee ID</th>
