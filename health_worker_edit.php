@@ -40,7 +40,7 @@ $histories = [
 <form class="inForm" action="/person_edit.php?person_id=<?php print($person_id); ?>"  method="post">
     <p class="inForm">
         <label class="inForm" for="isManager">Is Manager: </label>
-        <input class="inForm" name="isManager" id="isManager" type="checkbox" <?php $healthWorker["isManager"] ? print("checked"); ?>>
+        <input class="inForm" name="isManager" id="isManager" type="checkbox" <?php $healthWorker["isManager"] ? print("checked") :; ?>>
     </p>
 </form>
 
