@@ -6,7 +6,7 @@ if(array_key_exists("save", $_POST))
 {
     #TODO: Send the new person data to the mysql and get id back
     
-    $person_id = 1
+    $person_id = 1;
     header("Location: person_edit.php?person_id=" . $person_id);
     die();
 }
