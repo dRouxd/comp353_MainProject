@@ -32,7 +32,7 @@ if($result)
 <table class="default">
     <tr class="default">
 <?php
-    foreach($k in array_keys())
+    foreach(array_keys($result) as $k)
     {
 ?>
         <td class="default"><?php print($k); ?></td>
