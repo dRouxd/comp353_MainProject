@@ -1,6 +1,6 @@
 <?php
 
-  $servername = "zjc353.encs.concordia.ca";
+  $servername = "127.0.0.1";
   $username = "zjc353_1";
   $password = "DTFSK354";
 
