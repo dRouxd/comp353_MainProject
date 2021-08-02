@@ -19,7 +19,7 @@
 
 <form action="test_query.php" method="post">
     <input type="submit" name="run" value="Run"/>
-    <input type="text" name="sql" value="<?php if($mysql) print($mysql);?>"/>
+    <input type="text" name="sql" value="<?php if($mysql) print($mysql);?>" width="1000"/>
 </form>
 
 <?php
