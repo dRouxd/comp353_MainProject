@@ -16,12 +16,12 @@
 <body>
 <?php include 'head.php'; ?>
 <h3>Test Query</h3>
-
-<form action="test_query.php" method="post">
-    <input type="submit" name="run" value="Run"/>
-    <input type="text" name="sql" value="<?php if($mysql) print($mysql);?>" size="150"/>
-</form>
-
+<p>
+    <form action="test_query.php" method="post">
+        <input type="submit" name="run" value="Run"/>
+        <input type="text" name="sql" value="<?php if($mysql) print($mysql);?>" size="150"/>
+    </form>
+</p>
 <?php
     
 if($result)
