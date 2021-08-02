@@ -24,6 +24,17 @@
     }
 
   
+    function getListPerson()
+    {
+        global $conn;
+        
+        $sql = "SELECT personId, fname, lname, dateOfBirth, age, medicateCardNumber, telephone, email FROM Person"
+        
+        $result = $conn->query($sql);
 
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+  
+  
 
 ?>
