@@ -14,25 +14,13 @@
         die("Connection failed: " . $conn->connect_error);
     }
   
-    function test()
+    function test_query($sql)
     {
         global $conn;
         
-        $sql = "SELECT person_id, fname, lname FROM Person";
         $result = $conn->query($sql);
 
-        if ($result->num_rows > 0) 
-        {
-            // output data of each row
-            while($row = $result->fetch_assoc())
-            {
-                echo "id: " . $row["person_id"]. " - Name: " . $row["fname"]. " " . $row["lname"]. "<br>";
-            }
-        }
-        else
-        {
-            echo "0 results";
-        }
+        return $result->fetch_array(MYSQLI_ASSOC);
     }
 
   
