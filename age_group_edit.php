@@ -36,9 +36,9 @@ $ageGroups = [
 <form class="inForm" action="/age_group_edit.php"  method="post">
     <table>
         <tr>
-            <td>Age Group Number</td>
-            <td>Lower Bound</td>
-            <td>Upper Bound</td>
+            <th>Age Group Number</th>
+            <th>Lower Bound</th>
+            <th>Upper Bound</th>
         </tr>
     
 <?php
