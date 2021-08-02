@@ -12,7 +12,7 @@ $ageGroups = [
     ["ageGroupNumber" => "8", "lowerBound" => "12", "upperBound" => "17"],
     ["ageGroupNumber" => "9", "lowerBound" => "5", "upperBound" => "11"],
     ["ageGroupNumber" => "10", "lowerBound" => "0", "upperBound" => "4"]
-]
+];
 
 ?>
 <!DOCTYPE html>
