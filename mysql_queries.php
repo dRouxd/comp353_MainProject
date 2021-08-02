@@ -1,17 +1,17 @@
 <?php
 
-    $servername = "132.205.96.42";
+    $servername = "zjc353.encs.concordia.ca";
     $username = "zjc353_1";
     $password = "DTFSK354";
+    $database = "zjc353_1";
 
-  
     // Create connection
-    $conn = new mysqli($servername, $username, $password);
+    $conn = new mysqli($servername, $username, $password, $database);
 
     // Check connection
     if ($conn->connect_error)
     {
-      die("Connection failed: " . $conn->connect_error);
+        die("Connection failed: " . $conn->connect_error);
     }
   
     function test()
@@ -31,11 +31,8 @@
         }
         else
         {
-        echo "0 results";
-    }
-
-
-    $conn = null;
+            echo "0 results";
+        }
     }
 
   
