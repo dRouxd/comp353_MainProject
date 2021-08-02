@@ -16,6 +16,8 @@
   
     function test()
     {
+        global $conn;
+        
         $sql = "SELECT person_id, fname, lname FROM Person";
         $result = $conn->query($sql);
 
