@@ -34,23 +34,27 @@ $ageGroups = [
 
 <h3>Age Group Edit</h3>
 <form class="inForm" action="/age_group_edit.php"  method="post">
-    <p class="inForm">
-        <label class="inForm">Age Group Number</label>
-        <label class="inForm">Lower Bound</label>
-        <label class="inForm">Upper Bound</label>
-    </p>
+    <table>
+        <tr>
+            <td>Age Group Number</td>
+            <td>Lower Bound</td>
+            <td>Upper Bound</td>
+        </tr>
+    
 <?php
 foreach($ageGroups as $age)
 {
 ?>
-    <p class="inForm">
-        <label class="inForm"><?php print($age["ageGroupNumber"]); ?>: </label>
-        <input class="inForm" name="lowerbound<?php print($age["ageGroupNumber"]); ?>" type="number" value="<?php print($age["lowerBound"]); ?>">
-        <input class="inForm" name="upperbound<?php print($age["ageGroupNumber"]); ?>" type="number" value="<?php print($age["upperBound"]); ?>">
-    </p>
+        <tr>
+            <td><?php print($age["ageGroupNumber"]); ?>: </td>
+            <td><input class="inForm" name="lowerbound<?php print($age["ageGroupNumber"]); ?>" type="number" value="<?php print($age["lowerBound"]); ?>"></td>
+            <td><input class="inForm" name="upperbound<?php print($age["ageGroupNumber"]); ?>" type="number" value="<?php print($age["upperBound"]); ?>"></td>
+        </tr>
 <?php
 }
 ?>
+    
+    </table>
     <input type="submit" name="save" value="Save"/>
 </form>
 
