@@ -54,9 +54,9 @@ foreach($listPeople as $person)
 ?>  <tr class="default">
         <td class="default"><?php print($person["fname"]); ?></td>
         <td class="default"><?php print($person["lname"]); ?></td>
-        <td class="default"><?php print($person["DOB"]); ?></td>
+        <td class="default"><?php print($person["date_of_birth"]); ?></td>
         <td class="default"><?php print($person["age"]); ?></td>
-        <td class="default"><?php print($person["medicareCardNumber"]); ?></td>
+        <td class="default"><?php print($person["medicare_card_number"]); ?></td>
         <td class="default"><?php print($person["telephone"]); ?></td>
         <td class="default"><?php print($person["email"]); ?></td>
         <td class="default"><a href="person_detail.php?person_id=<?php print($person["person_id"]); ?>">Details</a> <a href="person_edit.php?person_id=<?php print($person["person_id"]); ?>">Edit</a></td>

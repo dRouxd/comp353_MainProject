@@ -28,7 +28,7 @@
     {
         global $conn;
         
-        $sql = "SELECT personId, fname, lname, dateOfBirth, age, medicateCardNumber, telephone, email FROM Person";
+        $sql = "SELECT person_id, fname, lname, date_of_birth, age, medicare_card_number, telephone, email FROM Person";
         
         $result = $conn->query($sql);
 
