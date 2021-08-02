@@ -9,6 +9,4 @@
 
 <?php include 'head.php'; ?>
 
-<?php phpinfo(); ?>
-
 <?php include 'tail.php'; ?>
