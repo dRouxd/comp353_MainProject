@@ -26,7 +26,7 @@
     function question_12()
     {
         global $conn;
-        $sql = ""
+        $sql = "";
         $result = $conn->query($sql);
         return $result->fetch_all(MYSQLI_ASSOC);
     }
@@ -34,7 +34,7 @@
     function question_13()
     {
         global $conn;
-        $sql = ""
+        $sql = "";
         $result = $conn->query($sql);
         return $result->fetch_all(MYSQLI_ASSOC);
     }
@@ -42,7 +42,7 @@
     function question_14()
     {
         global $conn;
-        $sql = ""
+        $sql = "";
         $result = $conn->query($sql);
         return $result->fetch_all(MYSQLI_ASSOC);
     }
@@ -50,7 +50,7 @@
     function question_15()
     {
         global $conn;
-        $sql = ""
+        $sql = "";
         $result = $conn->query($sql);
         return $result->fetch_all(MYSQLI_ASSOC);
     }
@@ -58,7 +58,7 @@
     function question_16()
     {
         global $conn;
-        $sql = ""
+        $sql = "";
         $result = $conn->query($sql);
         return $result->fetch_all(MYSQLI_ASSOC);
     }
@@ -66,7 +66,7 @@
     function question_17()
     {
         global $conn;
-        $sql = ""
+        $sql = "";
         $result = $conn->query($sql);
         return $result->fetch_all(MYSQLI_ASSOC);
     }
@@ -74,7 +74,7 @@
     function question_18()
     {
         global $conn;
-        $sql = ""
+        $sql = "";
         $result = $conn->query($sql);
         return $result->fetch_all(MYSQLI_ASSOC);
     }
@@ -82,7 +82,7 @@
     function question_19()
     {
         global $conn;
-        $sql = ""
+        $sql = "";
         $result = $conn->query($sql);
         return $result->fetch_all(MYSQLI_ASSOC);
     }
@@ -90,7 +90,7 @@
     function question_20()
     {
         global $conn;
-        $sql = ""
+        $sql = "";
         $result = $conn->query($sql);
         return $result->fetch_all(MYSQLI_ASSOC);
     }
