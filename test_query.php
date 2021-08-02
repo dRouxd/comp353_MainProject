@@ -32,8 +32,6 @@ if($result)
     }
     else
     {
-        print_r($result);
-        die();
 ?>
 <table class="default">
     <tr class="default">
