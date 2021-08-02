@@ -26,24 +26,47 @@
     
 if($result)
 {
-    print_r($result);
-    die();
+    if(count($result) == 0)
+    {
+        print("No Results.");
+    }
+    else
+    {
+        print_r($result);
+        die();
 ?>
 <table class="default">
     <tr class="default">
 <?php
-    foreach(array_keys($result) as $k)
-    {
+        $keys = array_keys($result[0]);
+        foreach($keys as $k)
+        {
 ?>
         <td class="default"><?php print($k); ?></td>
 <?
-    }
+        }
 ?>
     </tr>
 <?php
+        foreach($result as $row)
+        {
+?>
+    <tr class="default">
+<?php
+            foreach($keys as $k)
+            {
+?>
+                <td class="default"><?php print($row[$k]); ?></td>
+<?php
+            }
+?>
+    </tr>
+<?php
+        }
 ?>
 </table>
 <?php
+    }
 }
  
 ?>
