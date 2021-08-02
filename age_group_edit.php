@@ -1,12 +1,10 @@
 <?php include 'mysql_queries.php'; ?>
 <?php
-$facility_id = $_GET["facility_id"];
-
 if(array_key_exists("save", $_POST))
 {
     #TODO: Send the updated data to the mysql
     
-    header("Location: vaccination_facility_detail.php?facility_id=" . $facility_id);
+    header("Location: age_group.php");
     die();
 }
 
