@@ -67,8 +67,4 @@ foreach($listPeople as $person)
 <a href="person_add.php">Add Person</a>
 </p>
 
-
-<?php test(); ?>
-
-
 <?php include 'tail.php'; ?>
