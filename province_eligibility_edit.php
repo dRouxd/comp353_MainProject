@@ -49,7 +49,7 @@ foreach($provinces as $p)
 ?>
         <tr>
             <td><?php print($p["province"]); ?> </td>
-            <td><input class="inForm" name="<?php print($age["province"]); ?>" type="number" value="<?php print($p["ageGroupNumber"]); ?>"></td>
+            <td><input class="inForm" name="<?php print($age["province"]); ?>" type="number" value="<?php print($p["ageGroupNumber"]); ?>" min="1" max="10"></td>
         </tr>
 <?php
 }
