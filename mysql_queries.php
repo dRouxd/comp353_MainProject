@@ -20,7 +20,7 @@
         
         $result = $conn->query($sql);
 
-        return $result->fetch_array(MYSQLI_ASSOC);
+        return $result->fetch_all(MYSQLI_ASSOC);
     }
 
   
