@@ -46,7 +46,7 @@ foreach($ageGroups as $age)
 {
 ?>
         <tr>
-            <td><?php print($age["ageGroupNumber"]); ?>: </td>
+            <td><?php print($age["ageGroupNumber"]); ?> </td>
             <td><input class="inForm" name="lowerbound<?php print($age["ageGroupNumber"]); ?>" type="number" value="<?php print($age["lowerBound"]); ?>"></td>
             <td><input class="inForm" name="upperbound<?php print($age["ageGroupNumber"]); ?>" type="number" value="<?php print($age["upperBound"]); ?>"></td>
         </tr>
