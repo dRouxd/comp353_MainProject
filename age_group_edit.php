@@ -34,13 +34,17 @@ $ageGroups = [
 
 <h3>Age Group Edit</h3>
 <form class="inForm" action="/age_group_edit.php"  method="post">
-    
+    <p class="inForm">
+        <label class="inForm">Age Group Number</label>
+        <label class="inForm">Lower Bound</label>
+        <label class="inForm">Upper Bound</label>
+    </p>
 <?php
 foreach($ageGroups as $age)
 {
 ?>
     <p class="inForm">
-        <label class="inForm">Age Group <?php print($age["ageGroupNumber"]); ?>: </label>
+        <label class="inForm"><?php print($age["ageGroupNumber"]); ?>: </label>
         <input class="inForm" name="lowerbound<?php print($age["ageGroupNumber"]); ?>" type="number" value="<?php print($age["lowerBound"]); ?>">
         <input class="inForm" name="upperbound<?php print($age["ageGroupNumber"]); ?>" type="number" value="<?php print($age["upperBound"]); ?>">
     </p>
