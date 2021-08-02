@@ -43,68 +43,14 @@ foreach($ageGroups as $age)
 ?>
     <p class="inForm">
         <label class="inForm">Age Group <?php print($age["ageGroupNumber"]); ?>: </label>
-        <input class="inForm" name="lowerbound<?php print($age["ageGroupNumber"]); ?>" type="text" value="<?php print($age["lowerBound"]); ?>">
-        <input class="inForm" name="upperbound<?php print($age["ageGroupNumber"]); ?>" type="text" value="<?php print($age["upperBound"]); ?>">
+        <input class="inForm" name="lowerbound<?php print($age["ageGroupNumber"]); ?>" type="number" value="<?php print($age["lowerBound"]); ?>">
+        <input class="inForm" name="upperbound<?php print($age["ageGroupNumber"]); ?>" type="number" value="<?php print($age["upperBound"]); ?>">
     </p>
 <?php
 }
 ?>
     <input type="submit" name="save" value="Save"/>
 </form>
-
-<h3>Vaccine Inventory</h3>
-<table class="default">
-    <tr class="default">
-        <th class="default">Brand</th>
-        <th class="default">Status</th>
-        <th class="default">Description</th>
-        <th class="default">Reception Date</th>
-        <th class="default">Available Doses</th>
-    </tr>
-<?php
-foreach($vaccineInv as $inv)
-{
-?>
-    <tr class="default">
-        <td class="default"><a href="vaccine_detail.php?vaccine_id=<?php print($inv["vaccine_id"]); ?>"><?php print($inv["brand"]); ?></a></td>
-        <td class="default"><?php print($inv["status"]); ?></td>
-        <td class="default"><?php print($inv["description"]); ?></td>
-        <td class="default"><?php print($inv["reception_date"]); ?></td>
-        <td class="default"><?php print($inv["available_dose"]); ?></td>
-        <td class="default"><a href="vaccination_facility_inventory_edit.php?facility_id=<?php print($facility_id); ?>&vaccine_id=<?php print($inv["vaccine_id"]); ?>">Edit</a> <a href="vaccination_facility_inventory_transfer.php?facility_id=<?php print($facility_id); ?>&vaccine_id=<?php print($vaccine["vaccine_id"]); ?>">Transfer To</a></td>
-    </tr>
-<?php   
-}
-?>
-</table>
-<p>
-<a href="vaccination_facility_inventory_add.php?facility_id=<?php print($facility_id); ?>">Add Vaccine Inventory</a>
-</p>
-
-<h3>Employment</h3>
-<table class="default">
-    <tr class="default">
-        <th class="default">Employee ID</th>
-        <th class="default">Name</th>
-        <th class="default">Start Date</th>
-    </tr>
-<?php
-foreach($employment as $e)
-{
-?>
-    <tr class="default">
-        <td class="default"><?php print($e["eid"]); ?></td>
-        <td class="default"><a href="health_worker_detail.php?eid=<?php print($e["eid"]); ?>"><?php print($e["name"]); ?></a></td>
-        <td class="default"><?php print($e["start_date"]); ?></td>
-        <td class="default"><a href="vaccination_facility_employment_end.php?facility_id=<?php print($facility_id); ?>&eid=<?php print($e["eid"]); ?>">End Employment</a></td>
-    </tr>
-<?php   
-}
-?>
-</table>
-<p>
-<a href="vaccination_facility_employment_add.php?facility_id=<?php print($facility_id); ?>">Add Employment</a>
-</p>
 
 <?php include 'tail.php'; ?>
 
