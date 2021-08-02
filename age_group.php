@@ -29,7 +29,7 @@ $ageGroups = [
 <h3>Age Group</h3>
 <table class="default">
     <tr class="default">
-        <th class="default">Age Group</th>
+        <th class="default">Age Group Number</th>
         <th class="default">Age Lower Bound</th>
         <th class="default">Age Upper Bound</th>
     </tr>
