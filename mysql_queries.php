@@ -129,6 +129,9 @@
         if(!$conn->query($insertPersonSql))
         {
             print("Error: " . $conn->error);
+        }else
+        {
+            return $conn->insert_id;
         }
     }
   
