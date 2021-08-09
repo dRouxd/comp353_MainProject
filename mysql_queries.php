@@ -117,7 +117,6 @@
         {
             #insert postalcode into postalcodeInfo
             $postalCodeInsertSql = "INSERT INTO PostalCode_Info (postalCode, city, province) VALUES (\"$postalCode\", \"$city\", \"$province\")";
-            print($postalCodeInsertSql);
             if($conn->query($postalCodeInsertSql) !== FALSE)
             {
                 print("Error: " . $conn->error);
