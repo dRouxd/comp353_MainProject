@@ -124,6 +124,7 @@
             }
         }
         
+        #insert new person into database
         $insertPersonSql = "INSERT INTO Person (SSN_Passport, firstName, lastName, DOB, medicareCardNumber, mobileNumber, email, address, postalCode, citizenship) VALUES (\"$SSN\", \"$fname\", \"$lname\", \"$dob\", \"$cardNum\", \"$phone\", \"$email\", \"$address\", \"$postalCode\", \"$citizenship\")";
         if(!$conn->query($insertPersonSql))
         {
