@@ -6,7 +6,7 @@ if(array_key_exists("save", $_POST))
 {
     #TODO: Send the new person data to the mysql and get id back
     
-    addPerson($_POST["SSN"], $_POST["fname"], $_POST["lname"], $_POST["dob"], $_POST["medicare_card_number"], $_POST["telephone"], $_POST["email"], $_POST["address"], $_POST["postal_code"], $_POST["city"], $_POST["province"], $_POST["citizenship"], $_POST["age"]);
+    addPerson($_POST["SSN"], $_POST["fname"], $_POST["lname"], $_POST["dob"], $_POST["medicare_card_number"], $_POST["telephone"], $_POST["email"], $_POST["address"], $_POST["postal_code"], $_POST["city"], $_POST["province"], $_POST["citizenship"]);
     
     $person_id = 1;
     header("Location: person_edit.php?person_id=" . $person_id);
