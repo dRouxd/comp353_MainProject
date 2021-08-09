@@ -116,12 +116,12 @@
         if(!($conn->query($postalSql)))
         {
             #insert postalcode into postalcodeInfo
-            $postalCodeInsertSql = "INSERT INTO PostalCode_Info (postalCode, city, province) VALUES ($postalCode, $city, $province)";
+            $postalCodeInsertSql = "INSERT INTO PostalCode_Info (postalCode, city, province) VALUES (\"$postalCode\", \"$city\", \"$province\")";
             print($postalCodeInsertSql);
             $conn->query($postalCodeInsertSql);
         }
         
-        $insertPersonSql = "INSERT INTO Person (SSN_Passport, firstName, lastName, DOB, medicareCardNumber, mobileNumber, email, address, postalCode, citizenship, age) VALUES ($SSN, $fname, $lname, $dob, $cardNum, $phone, $email, $address, $postalCode, $citizenship, $age)";
+        $insertPersonSql = "INSERT INTO Person (SSN_Passport, firstName, lastName, DOB, medicareCardNumber, mobileNumber, email, address, postalCode, citizenship, age) VALUES (\"$SSN\", \"$fname\", \"$lname\", \"$dob\", \"$cardNum\", \"$phone\", \"$email\", \"$address\", \"$postalCode\", \"$citizenship\", $age)";
             print($insertPersonSql);
         $conn->query($insertPersonSql);
     }
