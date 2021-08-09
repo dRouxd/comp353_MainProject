@@ -6,6 +6,8 @@ if(array_key_exists("save", $_POST))
 {
     #TODO: Send the new person data to the mysql and get id back
     
+    addPerson($_POST["SSN"], $_POST["fname"], $_POST["lname"], $_POST["dob"], $_POST["medicare_card_number"], $_POST["telephone"], $_POST["email"], $_POST["address"], $_POST["postal_code"], $_POST["city"], $_POST["province"], $_POST["citizenship"], $_POST["age"])
+    
     $person_id = 1;
     header("Location: person_edit.php?person_id=" . $person_id);
     die();
@@ -41,7 +43,7 @@ $provinces = [
 <h3>Details</h3>
 <form class="inForm" action="/person_add.php"  method="post">
     <p class="inForm">
-        <label class="inForm" for="SSN">SSN: </label>
+        <label class="inForm" for="SSN">SSN/Passport: </label>
         <input class="inForm" name="SSN" id="SSN" type="text">
     </p>
     <p class="inForm">
@@ -53,15 +55,15 @@ $provinces = [
         <input class="inForm" name="lname"  id="lname" type="text">
     </p>
     <p class="inForm">
-        <label class="inForm" for="date_of_birth">Date of Birth: </label>
-        <input class="inForm" name="date_of_birth"  id="date_of_birth" type="date">
+        <label class="inForm" for="dob">Date of Birth: </label>
+        <input class="inForm" name="dob"  id="dob" type="date">
     </p>
     <p class="inForm">
         <label class="inForm" for="medicare_card_number">Medicare Card Number: </label>
         <input class="inForm" name="medicare_card_number" id="medicare_card_number" type="text">
     </p>
     <p class="inForm">
-        <label class="inForm" for="telephone">Telephone: </label>
+        <label class="inForm" for="telephone">Mobile Phone: </label>
         <input class="inForm" name="telephone"  id="telephone" type="text">
     </p>
     <p class="inForm">
