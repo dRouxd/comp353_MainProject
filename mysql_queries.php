@@ -124,6 +124,7 @@
         }
         
         $insertPersonSql = "INSERT INTO Person (SSN_Passport, firstName, lastName, DOB, medicareCardNumber, mobileNumber, email, address, postalCode, citizenship, age) VALUES (\"$SSN\", \"$fname\", \"$lname\", \"$dob\", \"$cardNum\", \"$phone\", \"$email\", \"$address\", \"$postalCode\", \"$citizenship\", $age)";
+        print($insertPersonSql);
         if($conn->query($insertPersonSql) !== FALSE)
         {
             print("Error: " . $conn->error);
