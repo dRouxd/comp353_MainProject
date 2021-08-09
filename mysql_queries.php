@@ -111,9 +111,10 @@
         global $conn;
         
         #check if the postalCode is already in the database
-        $postalSql = "SELECT postalCode FROM postalCode_Info WHERE postalCode = $postalCode";
+        $postalSql = "SELECT PostalCode FROM postalCode_Info WHERE postalCode = $postalCode";
+        $postalResult = $conn->query($sql);
         
-        if(mysqli_num_rows($conn->query($sql)) == 0)
+        if(mysqli_num_rows($postalResult) == 0)
         {
             #insert postalcode into postalcodeInfo
             $postalCodeInsertSql = "INSERT INTO PostalCode_Info (postalCode, city, province) VALUES ($postalCode, $city, $province)";
