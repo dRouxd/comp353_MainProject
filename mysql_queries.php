@@ -105,6 +105,24 @@
 
         return $result->fetch_all(MYSQLI_ASSOC);
     }
+    
+    function addPerson($SSN, $fname, $lname, $dob, $cardNum, $phone, $email, $address, $postalCode, $city, $province, $citizenship, $age)
+    {
+        global $conn;
+        
+        #check if the postalCode is already in the database
+        $postalSql = "SELECT postalCode FROM postalCode_Info WHERE postalCode = $postalCode";
+        
+        if(count($conn->query($sql)->fetch_all()) > 0)
+        {
+            #insert postalcode into postalcodeInfo
+            $postalCodeInsertSql = "INSERT INTO PostalCode_Info (postalCode, city, province) VALUES ($postalCode, $city, $province)";
+            $conn->query($postalCodeInsertSql);
+        }
+        
+        $insertPersonSql = "INSERT INTO Person (SSN_Passport, firstName, lastName, DOB, medicareCardNumber, mobileNumber, email, address, postalCode, citizenship, age) VALUES ($SSN, $fname, $lname, $dob, $cardNum, $phone, $email, $address, $postalCode, $citizenship, $age)";
+        $conn->query($insertPersonSql);
+    }
   
   
 
