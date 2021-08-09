@@ -112,7 +112,7 @@
         
         #check if the postalCode is already in the database
         $postalSql = "SELECT PostalCode FROM postalCode_Info WHERE postalCode = $postalCode";
-        $postalResult = $conn->query($sql);
+        $postalResult = $conn->query($postalSql);
         
         if(mysqli_num_rows($postalResult) == 0)
         {
