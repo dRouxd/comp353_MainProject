@@ -112,9 +112,8 @@
         
         #check if the postalCode is already in the database
         $postalSql = "SELECT PostalCode FROM postalCode_Info WHERE postalCode = $postalCode";
-        $postalResult = $conn->query($postalSql);
         
-        if(mysqli_num_rows($postalResult) == 0)
+        if(!($conn->query($postalSql)))
         {
             #insert postalcode into postalcodeInfo
             $postalCodeInsertSql = "INSERT INTO PostalCode_Info (postalCode, city, province) VALUES ($postalCode, $city, $province)";
