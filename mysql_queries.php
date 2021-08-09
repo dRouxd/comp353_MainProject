@@ -113,7 +113,6 @@
         #check if the postalCode is already in the database
         $postalSql = "SELECT postalCode FROM PostalCode_Info WHERE postalCode = \"$postalCode\"";
         $postalResult = $conn->query($postalSql);
-        print($postalResult->num_rows);
         if($postalResult->num_rows == 0)
         {
             #insert postalcode into postalcodeInfo
