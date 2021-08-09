@@ -99,7 +99,7 @@
     {
         global $conn;
         
-        $sql = "SELECT person_id, fname, lname, date_of_birth, age, medicare_card_number, telephone, email FROM Person";
+        $sql = "SELECT personID, firstName, lastName, DOB, age, medicareCardNumber, mobileNumber, email FROM Person";
         
         $result = $conn->query($sql);
 
