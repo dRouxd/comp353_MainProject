@@ -111,14 +111,14 @@
         global $conn;
         
         #check if the postalCode is already in the database
-        $postalSql = "SELECT PostalCode FROM postalCode_Info WHERE postalCode = \"$postalCode\"";
+        $postalSql = "SELECT postalCode FROM PostalCode_Info WHERE postalCode = \"$postalCode\"";
         $postalResult = $conn->query($postalSql);
         print($postalResult->num_rows);
         if($postalResult->num_rows == 0)
         {
             #insert postalcode into postalcodeInfo
             $postalCodeInsertSql = "INSERT INTO PostalCode_Info (postalCode, city, province) VALUES (\"$postalCode\", \"$city\", \"$province\")";
-            if($conn->query($postalCodeInsertSql) === FALSE)
+            if(!$conn->query($postalCodeInsertSql))
             {
                 print("Error: " . $conn->error);
                 return;
@@ -126,23 +126,10 @@
         }
         
         $insertPersonSql = "INSERT INTO Person (SSN_Passport, firstName, lastName, DOB, medicareCardNumber, mobileNumber, email, address, postalCode, citizenship) VALUES (\"$SSN\", \"$fname\", \"$lname\", \"$dob\", \"$cardNum\", \"$phone\", \"$email\", \"$address\", \"$postalCode\", \"$citizenship\")";
-        if($conn->query($insertPersonSql) === FALSE)
+        if(!$conn->query($insertPersonSql))
         {
             print("Error: " . $conn->error);
         }
-    }
-  
-  
-
-    function test()
-    {
-        global $conn;
-        
-        $postalSql = "SELECT PostalCode FROM postalCode_Info WHERE postalCode = \"$postalCode\"";
-        $postalResult = $conn->query($postalSql);
-        print($postalResult->num_rows);
-        
-        
     }
   
 ?>
