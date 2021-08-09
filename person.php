@@ -1,28 +1,6 @@
 <?php include 'mysql_queries.php'; ?>
 <?php
 
-$listPeople = [[
-    "person_id" => 1,
-    "fname" => "John",
-    "lname" => "Smith",
-    "" => "1990-07-31",
-    "age" => 31,
-    "medicare_card_number" => "SMIJ 9007 3132",
-    "telephone" => "123-345-4567",
-    "email" => "john.smith@gmail.com"
-],
-[
-    "person_id" => 2,
-    "fname" => "Johnny",
-    "lname" => "Smithy",
-    "date_of_birth" => "1980-07-31",
-    "age" => 41,
-    "medicare_card_number" => "SMIY 8007 3132",
-    "telephone" => "987-765-6543",
-    "email" => "johnny.smithy@gmail.com"
-]];
-
-
 $listPeople = getListPerson();
 
 ?>
@@ -52,12 +30,12 @@ $listPeople = getListPerson();
 foreach($listPeople as $person)
 {
 ?>  <tr class="default">
-        <td class="default"><?php print($person["fname"]); ?></td>
-        <td class="default"><?php print($person["lname"]); ?></td>
-        <td class="default"><?php print($person["date_of_birth"]); ?></td>
+        <td class="default"><?php print($person["firstName"]); ?></td>
+        <td class="default"><?php print($person["lastName"]); ?></td>
+        <td class="default"><?php print($person["DOB"]); ?></td>
         <td class="default"><?php print($person["age"]); ?></td>
-        <td class="default"><?php print($person["medicare_card_number"]); ?></td>
-        <td class="default"><?php print($person["telephone"]); ?></td>
+        <td class="default"><?php print($person["medicareCardNumber"]); ?></td>
+        <td class="default"><?php print($person["mobileNumber"]); ?></td>
         <td class="default"><?php print($person["email"]); ?></td>
         <td class="default"><a href="person_detail.php?person_id=<?php print($person["person_id"]); ?>">Details</a> <a href="person_edit.php?person_id=<?php print($person["person_id"]); ?>">Edit</a></td>
     </tr>
