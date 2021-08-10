@@ -2,20 +2,22 @@
 <?php
 
 $provinces = [
-    ["province" => "AB", "ageGroupNumber" => "4"],
-    ["province" => "BC", "ageGroupNumber" => "5"],
-    ["province" => "MB", "ageGroupNumber" => "7"],
-    ["province" => "NB", "ageGroupNumber" => "4"],
-    ["province" => "NL", "ageGroupNumber" => "6"],
-    ["province" => "NS", "ageGroupNumber" => "9"],
-    ["province" => "NT", "ageGroupNumber" => "2"],
-    ["province" => "NU", "ageGroupNumber" => "4"],
-    ["province" => "ON", "ageGroupNumber" => "7"],
-    ["province" => "PE", "ageGroupNumber" => "5"],
-    ["province" => "QC", "ageGroupNumber" => "6"],
-    ["province" => "SK", "ageGroupNumber" => "8"],
-    ["province" => "YT", "ageGroupNumber" => "9"]
+    ["province" => "AB", "age_group_number" => "4"],
+    ["province" => "BC", "age_group_number" => "5"],
+    ["province" => "MB", "age_group_number" => "7"],
+    ["province" => "NB", "age_group_number" => "4"],
+    ["province" => "NL", "age_group_number" => "6"],
+    ["province" => "NS", "age_group_number" => "9"],
+    ["province" => "NT", "age_group_number" => "2"],
+    ["province" => "NU", "age_group_number" => "4"],
+    ["province" => "ON", "age_group_number" => "7"],
+    ["province" => "PE", "age_group_number" => "5"],
+    ["province" => "QC", "age_group_number" => "6"],
+    ["province" => "SK", "age_group_number" => "8"],
+    ["province" => "YT", "age_group_number" => "9"]
 ];
+
+$provinces = getListProvince();
 
 ?>
 <!DOCTYPE html>
@@ -42,7 +44,7 @@ foreach($provinces as $p)
 {
 ?>  <tr class="default">
         <td class="default"><?php print($p["province"]); ?></td>
-        <td class="default"><?php print($p["ageGroupNumber"]); ?></td>
+        <td class="default"><?php print($p["age_group_number"]); ?></td>
     </tr>
 <?php
 }
