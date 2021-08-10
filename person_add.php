@@ -5,9 +5,34 @@
 if(array_key_exists("save", $_POST))
 {
     #TODO: Send the new person data to the mysql and get id back
+    $ssn=$_POST['ssn'];
+    $fname=$_POST['fname'];
+    $lname=$_POST['lname'];
+    $age_group=$_POST['age_group'];
+    $medicare_card_number=$_POST['medicare_card_number'];
+    $telephone=$_POST['telephone'];
+    $citizenship=$_POST['citizenship'];
+    $date_of_birth=$_POST['date_of_birth'];
+    $address=$_POST['address'];
+    $city=$_POST['city'];
+    $province=$_POST['province'];
+    $postal_code=$_POST['postal_code'];
+    $email=$_POST['email'];
+    $age_group=$_POST['age_group'];
     
-    $person_id = addPerson($_POST["SSN"], $_POST["fname"], $_POST["lname"], $_POST["dob"], $_POST["medicare_card_number"], $_POST["telephone"], $_POST["email"], $_POST["address"], $_POST["postal_code"], $_POST["city"], $_POST["province"], $_POST["citizenship"]);
+
+    //$sqlinsert="insert into Person(ssn, fname, lname, age_group, medicare_card_number, telephone, citizenship) values('{$ssn}', '{$fname}', '{$lname}', '{$age_group}', '{$medicare_card_number}', '{$telephone}', '{$citizenship}')";
+
+    $sqlinsert="insert into Person(ssn, fname, lname, date_of_birth, medicare_card_number, telephone, address, city, province, postal_code, citizenship, email, age_group) values('{$ssn}', '{$fname}', '{$lname}', '{$date_of_birth}', '{$medicare_card_number}', '{$telephone}', '{$address}', '{$city}', '{$province}', '{$postal_code}', '{$citizenship}', '{$email}', '{$age_group}')";
+
+    $personlist = addPerson($sqlinsert);
+
+    //foreach($personlist as $person)
+    //{
+       $person_id = $personlist["person_id"];
+    //}
     
+    //$person_id = 1;
     header("Location: person_edit.php?person_id=" . $person_id);
     die();
 }
@@ -40,10 +65,10 @@ $provinces = [
 <body>
 <?php include 'head.php'; ?>
 <h3>Details</h3>
-<form class="inForm" action="/person_add.php"  method="post">
+<form class="inForm" action="person_add.php"  method="post">
     <p class="inForm">
-        <label class="inForm" for="SSN">SSN/Passport: </label>
-        <input class="inForm" name="SSN" id="SSN" type="text">
+        <label class="inForm" for="ssn">SSN: </label>
+        <input class="inForm" name="ssn" id="ssn" type="text">
     </p>
     <p class="inForm">
         <label class="inForm" for="fname">First Name: </label>
@@ -54,15 +79,19 @@ $provinces = [
         <input class="inForm" name="lname"  id="lname" type="text">
     </p>
     <p class="inForm">
-        <label class="inForm" for="dob">Date of Birth: </label>
-        <input class="inForm" name="dob"  id="dob" type="date">
+        <label class="inForm" for="date_of_birth">Date of Birth: </label>
+        <input class="inForm" name="date_of_birth"  id="date_of_birth" type="date">
+    </p>
+    <p class="inForm">
+        <label class="inForm" for="age_group">Age Group: </label>
+        <input class="inForm" name="age_group" id="age_group" type="text">
     </p>
     <p class="inForm">
         <label class="inForm" for="medicare_card_number">Medicare Card Number: </label>
         <input class="inForm" name="medicare_card_number" id="medicare_card_number" type="text">
     </p>
     <p class="inForm">
-        <label class="inForm" for="telephone">Mobile Phone: </label>
+        <label class="inForm" for="telephone">Telephone: </label>
         <input class="inForm" name="telephone"  id="telephone" type="text">
     </p>
     <p class="inForm">
