@@ -1,9 +1,20 @@
 <?php include 'mysql_queries.php'; ?>
 <?php
-    if($_POST["run"] == "Run")
+    if (array_key_exists("sql", $_POST)) 
     {
         $mysql = $_POST["sql"];
+    }
+    else
+    {
+	$mysql = "";
+    }
+    if (array_key_exists("run", $_POST) && ($_POST["run"] == "Run") ) 
+    {
         $result = test_query($mysql); 
+    }
+    else
+    {
+	$result = "";
     }
 ?>
 <!DOCTYPE html>
@@ -41,7 +52,7 @@ if($result)
         {
 ?>
         <td class="default"><?php print($k); ?></td>
-<?
+<?php
         }
 ?>
     </tr>
