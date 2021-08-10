@@ -5,6 +5,26 @@ $person_id = $_GET["person_id"];
 if(array_key_exists("save", $_POST))
 {
     #TODO: Send the updated data to the mysql
+    $ssn=$_POST['ssn'];
+    $fname=$_POST['fname'];
+    $lname=$_POST['lname'];
+    $age_group=$_POST['age_group'];
+    $medicare_card_number=$_POST['medicare_card_number'];
+    $telephone=$_POST['telephone'];
+    $citizenship=$_POST['citizenship'];
+    $date_of_birth=$_POST['date_of_birth'];
+    $address=$_POST['address'];
+    $city=$_POST['city'];
+    $province=$_POST['province'];
+    $postal_code=$_POST['postal_code'];
+    $email=$_POST['email'];
+
+    $sqlupdate="update Person set ssn='".$ssn."', fname='".$fname."', lname='".$lname."', date_of_birth='".$date_of_birth."', medicare_card_number='".$medicare_card_number."', telephone='".$telephone."', address='".$address."', city='".$city."', province='".$province."', postal_code='".$postal_code."', citizenship='".$citizenship."', email='".$email."', age_group='".$age_group."' where person_id='".$person_id."'";
+    
+    //$sqlupdate="update Person set ssn='".$ssn."', fname='".$fname."' where person_id='".$person_id."'";
+    //$sqlupdate="update Person set ssn=$ssn, fname=$fname, lname=$lname, date_of_birth=$date_of_birth, medicare_card_number=$medicare_card_number, telephone=$telephone, address=$address, city=$city, province=$province, postal_code=$postal_code, citizenship=$citizenship, email=$email, age_group=$age_group where person_id=$person_id";
+    
+    updatePerson($sqlupdate);
     
     header("Location: person_detail.php?person_id=" . $person_id);
     die();
@@ -28,6 +48,8 @@ $person =
     "postal_code" => "1q2w3e",
     "citizenship" => "Canadian"
 ];
+
+$listperson = getPersonById($person_id);
 
 # TODO: Get Vaccines received from mysql
 $vaccines = 
@@ -72,14 +94,20 @@ $provinces = [
 <?php include 'head.php'; ?>
 
 <p>
-<a href="person_delete.php?person_id=<?php print($person_id); ?>">Delete</a>
+<a href="person_delete.php?confirm=false&person_id=<?php print($person_id); ?>">Delete</a>
 </p>
 
 <h3>Edit Details</h3>
-<form class="inForm" action="/person_edit.php?person_id=<?php print($person_id); ?>"  method="post">
+<form class="inForm" action="person_edit.php?person_id=<?php print($person_id); ?>"  method="post">
+
+<?php
+
+foreach($listperson as $person)
+{
+?>
     <p class="inForm">
-        <label class="inForm" for="SSN">SSN: </label>
-        <input class="inForm" name="SSN" id="SSN" type="text" value="<?php print($person["ssn"]); ?>">
+        <label class="inForm" for="ssn">SSN: </label>
+        <input class="inForm" name="ssn" id="ssn" type="text" value="<?php print($person["ssn"]); ?>">
     </p>
     <p class="inForm">
         <label class="inForm" for="fname">First Name: </label>
@@ -92,6 +120,10 @@ $provinces = [
     <p class="inForm">
         <label class="inForm" for="date_of_birth">Date of Birth: </label>
         <input class="inForm" name="date_of_birth"  id="date_of_birth" type="date" value="<?php print($person["date_of_birth"]); ?>">
+    </p>
+    <p class="inForm">
+        <label class="inForm" for="age_group">Age Group: </label>
+        <input class="inForm" name="age_group" id="age_group" type="text" value="<?php print($person["age_group"]); ?>">
     </p>
     <p class="inForm">
         <label class="inForm" for="medicare_card_number">Medicare Card Number: </label>
@@ -141,6 +173,10 @@ foreach($provinces as $p)
         <label class="inForm" for="citizenship">Citizenship: </label>
         <input class="inForm" name="citizenship"  id="citizenship" type="text" value="<?php print($person["citizenship"]); ?>">
     </p>
+<?php
+}
+
+?>
     <input type="submit" name="save" value="Save"/>
 </form>
 
