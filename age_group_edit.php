@@ -3,23 +3,37 @@
 if(array_key_exists("save", $_POST))
 {
     #TODO: Send the updated data to the mysql
+    $ageGroups=getListAgeGroup();
+
+    foreach($ageGroups as $age)
+    {
+        $age_group_number = $age['age_group_number'];
+        $lower_bound = $_POST["'lower_bound".$age_group_number."'"];
+        $lower_bound = $_POST['lower_bound'.$age_group_number];
+        $upper_bound = $_POST['upper_bound'.$age_group_number];
+        $sqlupdate="update age_group set lower_bound='".$lower_bound."', upper_bound='".$upper_bound."' where age_group_number='".$age_group_number."'";
+
+        updateAgeGroup($sqlupdate);
+    }
     
     header("Location: age_group.php");
     die();
 }
 
 $ageGroups = [
-    ["ageGroupNumber" => "1", "lowerBound" => "80", "upperBound" => "200"],
-    ["ageGroupNumber" => "2", "lowerBound" => "70", "upperBound" => "79"],
-    ["ageGroupNumber" => "3", "lowerBound" => "60", "upperBound" => "69"],
-    ["ageGroupNumber" => "4", "lowerBound" => "50", "upperBound" => "59"],
-    ["ageGroupNumber" => "5", "lowerBound" => "40", "upperBound" => "49"],
-    ["ageGroupNumber" => "6", "lowerBound" => "30", "upperBound" => "39"],
-    ["ageGroupNumber" => "7", "lowerBound" => "18", "upperBound" => "29"],
-    ["ageGroupNumber" => "8", "lowerBound" => "12", "upperBound" => "17"],
-    ["ageGroupNumber" => "9", "lowerBound" => "5", "upperBound" => "11"],
-    ["ageGroupNumber" => "10", "lowerBound" => "0", "upperBound" => "4"]
+    ["age_group_number" => "1", "lower_bound" => "80", "upper_bound" => "200"],
+    ["age_group_number" => "2", "lower_bound" => "70", "upper_bound" => "79"],
+    ["age_group_number" => "3", "lower_bound" => "60", "upper_bound" => "69"],
+    ["age_group_number" => "4", "lower_bound" => "50", "upper_bound" => "59"],
+    ["age_group_number" => "5", "lower_bound" => "40", "upper_bound" => "49"],
+    ["age_group_number" => "6", "lower_bound" => "30", "upper_bound" => "39"],
+    ["age_group_number" => "7", "lower_bound" => "18", "upper_bound" => "29"],
+    ["age_group_number" => "8", "lower_bound" => "12", "upper_bound" => "17"],
+    ["age_group_number" => "9", "lower_bound" => "5", "upper_bound" => "11"],
+    ["age_group_number" => "10", "lower_bound" => "0", "upper_bound" => "4"]
 ];
+
+$ageGroups=getListAgeGroup();
 
 ?>
 <!DOCTYPE html>
@@ -33,7 +47,7 @@ $ageGroups = [
 <?php include 'head.php'; ?>
 
 <h3>Age Group Edit</h3>
-<form class="inForm" action="/age_group_edit.php"  method="post">
+<form class="inForm" action="age_group_edit.php"  method="post">
     <table>
         <tr>
             <th>Age Group Number</th>
@@ -46,9 +60,9 @@ foreach($ageGroups as $age)
 {
 ?>
         <tr>
-            <td><?php print($age["ageGroupNumber"]); ?> </td>
-            <td><input class="inForm" name="lowerbound<?php print($age["ageGroupNumber"]); ?>" type="number" value="<?php print($age["lowerBound"]); ?>"></td>
-            <td><input class="inForm" name="upperbound<?php print($age["ageGroupNumber"]); ?>" type="number" value="<?php print($age["upperBound"]); ?>"></td>
+            <td><?php print($age["age_group_number"]); ?> </td>
+            <td><input class="inForm" name="lower_bound<?php print($age["age_group_number"]); ?>" type="number" value="<?php print($age["lower_bound"]); ?>"></td>
+            <td><input class="inForm" name="upper_bound<?php print($age["age_group_number"]); ?>" type="number" value="<?php print($age["upper_bound"]); ?>"></td>
         </tr>
 <?php
 }
@@ -59,8 +73,6 @@ foreach($ageGroups as $age)
 </form>
 
 <?php include 'tail.php'; ?>
-
-
 
 
 
