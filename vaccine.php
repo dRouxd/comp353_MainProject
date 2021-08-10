@@ -14,6 +14,7 @@ $listVaccine = [
         "description" => "pfizer description"
     ]
 ];
+$listVaccine = getListVaccine();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,6 +31,8 @@ $listVaccine = [
     <tr class="default">
         <th class="default">Brand</th>
         <th class="default">Current Status</th>
+        <th class="default">Approval Date</th>
+        <th class="default">Suspended Date</th>
         <th class="default">Description</th>
     </tr>
 
@@ -39,6 +42,8 @@ foreach($listVaccine as $vaccine)
 ?>  <tr class="default">
         <td class="default"><?php print($vaccine["brand"]); ?></td>
         <td class="default"><?php print($vaccine["current_status"]); ?></td>
+        <td class="default"><?php print($vaccine["approval_date"]); ?></td>
+        <td class="default"><?php print($vaccine["suspended_date"]); ?></td>
         <td class="default"><?php print($vaccine["description"]); ?></td>
         <td class="default"><a href="vaccine_detail.php?vaccine_id=<?php print($vaccine["vaccine_id"]); ?>">Detail</a> <a href="vaccine_edit.php?vaccine_id=<?php print($vaccine["vaccine_id"]); ?>">Edit</a></td>
     </tr>
