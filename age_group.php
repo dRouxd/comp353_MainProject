@@ -14,6 +14,8 @@ $ageGroups = [
     ["ageGroupNumber" => "10", "lowerBound" => "0", "upperBound" => "4"]
 ];
 
+$ageGroups = getListAgeGroup();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,9 +41,9 @@ $ageGroups = [
 foreach($ageGroups as $age)
 {
 ?>  <tr class="default">
-        <td class="default"><?php print($age["ageGroupNumber"]); ?></td>
-        <td class="default"><?php print($age["lowerBound"]); ?></td>
-        <td class="default"><?php print($age["upperBound"]); ?></td>
+        <td class="default"><?php print($age["age_group_number"]); ?></td>
+        <td class="default"><?php print($age["lower_bound"]); ?></td>
+        <td class="default"><?php print($age["upper_bound"]); ?></td>
     </tr>
 <?php
 }
