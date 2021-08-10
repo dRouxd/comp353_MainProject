@@ -1,6 +1,30 @@
 <?php include 'mysql_queries.php'; ?>
 <?php
 
+$listPeople = [[
+    "person_id" => 1,
+    "ssn" => "1",
+    "fname" => "John",
+    "lname" => "Smith",
+    "" => "1990-07-31",
+    "age" => 31,
+    "medicare_card_number" => "SMIJ 9007 3132",
+    "telephone" => "123-345-4567",
+    "email" => "john.smith@gmail.com"
+],
+[
+    "person_id" => 2,
+    "ssn" => "2",
+    "fname" => "Johnny",
+    "lname" => "Smithy",
+    "date_of_birth" => "1980-07-31",
+    "age" => 41,
+    "medicare_card_number" => "SMIY 8007 3132",
+    "telephone" => "987-765-6543",
+    "email" => "johnny.smithy@gmail.com"
+]];
+
+
 $listPeople = getListPerson();
 
 ?>
@@ -16,10 +40,11 @@ $listPeople = getListPerson();
 <h3>Person</h3>
 <table class="default">
     <tr class="default">
+        <th class="default">SSN</th>
         <th class="default">First Name</th>
         <th class="default">Last Name</th>
         <th class="default">Date of Birth</th>
-        <th class="default">Age</th>
+        <th class="default">Age Group</th>
         <th class="default">Medicare Number</th>
         <th class="default">Phone</th>
         <th class="default">Email</th>
@@ -30,12 +55,13 @@ $listPeople = getListPerson();
 foreach($listPeople as $person)
 {
 ?>  <tr class="default">
-        <td class="default"><?php print($person["firstName"]); ?></td>
-        <td class="default"><?php print($person["lastName"]); ?></td>
-        <td class="default"><?php print($person["DOB"]); ?></td>
-        <td class="default"><?php print($person["age"]); ?></td>
-        <td class="default"><?php print($person["medicareCardNumber"]); ?></td>
-        <td class="default"><?php print($person["mobileNumber"]); ?></td>
+        <td class="default"><?php print($person["ssn"]); ?></td>
+        <td class="default"><?php print($person["fname"]); ?></td>
+        <td class="default"><?php print($person["lname"]); ?></td>
+        <td class="default"><?php print($person["date_of_birth"]); ?></td>
+        <td class="default"><?php print($person["age_group"]); ?></td>
+        <td class="default"><?php print($person["medicare_card_number"]); ?></td>
+        <td class="default"><?php print($person["telephone"]); ?></td>
         <td class="default"><?php print($person["email"]); ?></td>
         <td class="default"><a href="person_detail.php?person_id=<?php print($person["person_id"]); ?>">Details</a> <a href="person_edit.php?person_id=<?php print($person["person_id"]); ?>">Edit</a></td>
     </tr>
