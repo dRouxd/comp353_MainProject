@@ -5,7 +5,16 @@ $vaccine_id = $_GET["vaccine_id"];
 if(array_key_exists("save", $_POST))
 {
     #TODO: Send the updated data to the mysql
-    
+    $brand=$_POST['brand'];
+    $current_status=$_POST['current_status'];
+    $approval_date=$_POST['approval_date'];
+    $suspended_date=$_POST['suspended_date'];
+    $description =$_POST['description'];
+
+    $sqlupdate="update Vaccine set brand='".$brand."', current_status='".$current_status."', approval_date='".$approval_date."', suspended_date='".$suspended_date."', description='".$description."' where vaccine_id='".$vaccine_id."'";
+
+    updateVaccine($sqlupdate);
+
     header("Location: vaccine_detail.php?vaccine_id=" . $vaccine_id);
     die();
 }
@@ -18,6 +27,8 @@ $vaccine =
     "current_status" => "APPROVED",
     "description" => "moderna description"
 ];
+
+$vaccine=getVaccineById($vaccine_id); 
 
 # TODO: Get history received from mysql
 $histories = 
@@ -38,14 +49,26 @@ $histories =
 <?php include 'head.php'; ?>
 
 <p>
-<a href="vaccine_delete.php?vaccine_id=<?php print($vaccine_id); ?>">Delete</a>
+<a href="vaccine_delete.php?confirm=false&vaccine_id=<?php print($vaccine_id); ?>">Delete</a>
 </p>
 
 <h3>Edit Details</h3>
-<form class="inForm" action="/vaccine_edit.php?vaccine_id=<?php print($vaccine_id); ?>"  method="post">
+<form class="inForm" action="vaccine_edit.php?vaccine_id=<?php print($vaccine_id); ?>"  method="post">
     <p class="inForm">
         <label class="inForm" for="brand">Brand: </label>
-        <input class="inForm" name="brand" id="brand" type="brand" value="<?php print($vaccine["brand"]); ?>">
+        <input class="inForm" name="brand" id="brand" type="text" value="<?php print($vaccine["brand"]); ?>">
+    </p>
+    <p class="inForm">
+        <label class="inForm" for="current_status">Current Status: </label>
+        <input class="inForm" name="current_status" id="current_status" type="text" value="<?php print($vaccine["current_status"]); ?>">
+    </p>
+    <p class="inForm">
+        <label class="inForm" for="approval_date">Approval Date: </label>
+        <input class="inForm" name="approval_date" id="approval_date" type="date" value="<?php print($vaccine["approval_date"]); ?>">
+    </p>
+    <p class="inForm">
+        <label class="inForm" for="suspended_date">Suspended Date: </label>
+        <input class="inForm" name="suspended_date" id="suspended_date" type="date" value="<?php print($vaccine["suspended_date"]); ?>">
     </p>
     <p class="inForm">
         <label class="inForm" for="description">Description: </label>
