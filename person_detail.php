@@ -21,6 +21,8 @@ $person =
     "citizenship" => "Canadian"
 ];
 
+$listperson = getPersonById($person_id);
+
 # TODO: Get Vaccines received from mysql
 $vaccines = 
 [
@@ -52,7 +54,12 @@ $infections =
 
 <h3>Details</h3>
 <table class="default">
-    <tr class="default">
+
+<?php
+
+foreach($listperson as $person)
+{
+?>  <tr class="default">
         <th class="default">SSN</th>
         <td class="default"><?php print($person["ssn"]); ?></td>
     </tr>
@@ -69,8 +76,8 @@ $infections =
         <td class="default"><?php print($person["date_of_birth"]); ?></td>
     </tr>
     <tr class="default">
-        <th class="default">Age</th>
-        <td class="default"><?php print($person["age"]); ?></td>
+        <th class="default">Age Group</th>
+        <td class="default"><?php print($person["age_group"]); ?></td>
     </tr>
     <tr class="default">
         <th class="default">Medicare Card Number</th>
@@ -104,6 +111,10 @@ $infections =
         <th class="default">Citizenship</th>
         <td class="default"><?php print($person["citizenship"]); ?></td>
     </tr>
+<?php
+}
+
+?>
 </table>
 
 <h3>Vaccinations</h3>
