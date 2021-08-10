@@ -6,8 +6,10 @@ $vaccine_id = $_GET["vaccine_id"];
 if($_GET["confirm"] == "true")
 {
     #TODO: send the request to mysql to delete vaccine_id
+    $sqldelete="delete from Vaccine where vaccine_id='".$vaccine_id."'";
     
-    $person_id = 1;
+    updateVaccine($sqldelete);
+    
     header("Location: vaccine.php");
     die();
 }
@@ -26,7 +28,7 @@ if($_GET["confirm"] == "true")
 <h3>Confirm</h3>
 
 <p>
-Are you sure you want to delete this vaccine? <a href="vaccine_delete.php?vaccine_id=<?php print($person_id); ?>&confirm=true">Yes</a> <a href="vaccine_edit.php?vaccine_id=<?php print($vaccine_id); ?>">No</a>
+Are you sure you want to delete this vaccine? <a href="vaccine_delete.php?vaccine_id=<?php print($vaccine_id); ?>&confirm=true">Yes</a> <a href="vaccine_edit.php?vaccine_id=<?php print($vaccine_id); ?>">No</a>
 </p>
 
 
