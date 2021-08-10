@@ -55,9 +55,3 @@ foreach($listPeople as $p)
 
 
 
-
-
-
-
-
-
