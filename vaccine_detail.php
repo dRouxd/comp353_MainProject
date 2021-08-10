@@ -11,6 +11,8 @@ $vaccine =
     "description" => "moderna description"
 ];
 
+$vaccine=getVaccineById($vaccine_id); 
+
 # TODO: Get history received from mysql
 $histories = 
 [
@@ -38,6 +40,18 @@ $histories =
     <tr class="default">
         <th class="default">Brand</th>
         <td class="default"><?php print($vaccine["brand"]); ?></td>
+    </tr>
+    <tr class="default">
+        <th class="default">Current Status</th>
+        <td class="default"><?php print($vaccine["current_status"]); ?></td>
+    </tr>
+    <tr class="default">
+        <th class="default">Approval Date</th>
+        <td class="default"><?php print($vaccine["approval_date"]); ?></td>
+    </tr>
+    <tr class="default">
+        <th class="default">Suspended Date</th>
+        <td class="default"><?php print($vaccine["suspended_date"]); ?></td>
     </tr>
     <tr class="default">
         <th class="default">Description</th>
