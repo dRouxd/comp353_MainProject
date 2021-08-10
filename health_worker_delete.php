@@ -31,12 +31,3 @@ Are you sure you want to delete this health worker? <a href="health_worker_delet
 
 <?php include 'tail.php'; ?>
 
-
-
-
-
-
-
-
-
-
