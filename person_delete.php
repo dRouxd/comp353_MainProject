@@ -6,8 +6,11 @@ $person_id = $_GET["person_id"];
 if($_GET["confirm"] == "true")
 {
     #TODO: send the request to mysql to delete person_id
+    $sqldelete="delete from Person where person_id='".$person_id."'";
     
-    $person_id = 1;
+    updatePerson($sqldelete);
+
+    //$person_id = 1;
     header("Location: person.php");
     die();
 }
