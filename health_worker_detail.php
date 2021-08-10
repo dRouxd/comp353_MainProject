@@ -60,13 +60,3 @@ foreach($histories as $history)
 </table>
 
 <?php include 'tail.php'; ?>
-
-
-
-
-
-
-
-
-
-
