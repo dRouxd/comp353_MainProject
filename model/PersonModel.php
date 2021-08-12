@@ -13,7 +13,7 @@ class PersonModel extends PdoModel
 
     public function insertPerson($person)
     {
-        $sql = "insert into Person values (?,?,?,?,?,?,?,?,?,?,?)";
+        $sql = "insert into Person values (?,?,?,?,?,?,?,?,?,?)";
         $prepare = $this->dbh->prepare($sql);
         $prepare->bindParam(1, $person['personID']);
         $prepare->bindParam(2, $person['SSN_Passport']);
