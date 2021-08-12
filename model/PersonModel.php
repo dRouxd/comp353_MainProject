@@ -24,8 +24,7 @@ class PersonModel extends PdoModel
         $prepare->bindParam(7, $person['mobileNumber']);
         $prepare->bindParam(8, $person['email']);
         $prepare->bindParam(9, $person['address']);
-        $prepare->bindParam(10, $person['postalCode']);
-        $prepare->bindParam(11, $person['citizenship']);
+        $prepare->bindParam(10, $person['citizenship']);
         return $prepare->execute();
     }
 
