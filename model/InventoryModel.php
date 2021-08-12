@@ -8,7 +8,7 @@ class InventoryModel extends PdoModel
 {
     public function inventoryList()
     {
-        return $this->toList($this->dbh->query("select * from inventory"));
+        return $this->toList($this->dbh->query("select * from Inventory"));
     }
 
     public function insertInventory($Inventory)
@@ -16,7 +16,7 @@ class InventoryModel extends PdoModel
         $facilityID = $Inventory['facilityID'];
         $vaccineID = $Inventory['vaccineID'];
         $availableDoses = $Inventory['availableDoses'];
-        $sql = "insert into inventory values (?,?,?)";
+        $sql = "insert into Inventory values (?,?,?)";
         $prepare = $this->dbh->prepare($sql);
         $prepare->bindParam(1, $facilityID);
         $prepare->bindParam(2, $vaccineID);
@@ -25,7 +25,7 @@ class InventoryModel extends PdoModel
     }
 
     public function remain($facilityID,$vaccineID){
-        $sql = "SELECT SUM(i.`availableDoses`)-(SELECT SUM(s.`dosesReceived`) FROM shipments s WHERE facilityID= ? AND vaccineID=?) remain FROM inventory i WHERE facilityID= ? AND vaccineID=?";
+        $sql = "SELECT SUM(i.`availableDoses`)-(SELECT SUM(s.`dosesReceived`) FROM Shipments s WHERE facilityID= ? AND vaccineID=?) remain FROM Inventory i WHERE facilityID= ? AND vaccineID=?";
         $prepare = $this->dbh->prepare($sql);
         $prepare->bindParam(1, $facilityID);
         $prepare->bindParam(2, $vaccineID);

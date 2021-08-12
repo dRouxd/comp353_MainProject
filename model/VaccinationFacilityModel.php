@@ -9,7 +9,7 @@ class VaccinationFacilityModel extends PdoModel
 
     public function vaccinationFacilityList()
     {
-        return $this->toList($this->dbh->query("select * from vaccination_facility"));
+        return $this->toList($this->dbh->query("select * from Vaccination_Facility"));
     }
 
     public function insertVaccinationFacility($vaccinationFacility)
@@ -21,7 +21,7 @@ class VaccinationFacilityModel extends PdoModel
         $province = $vaccinationFacility['province'];
         $website_url = $vaccinationFacility['website_url'];
         $type = $vaccinationFacility['type'];
-        $sql = "insert into vaccination_facility values (?,?,?,?,?,?,?)";
+        $sql = "insert into Vaccination_Facility values (?,?,?,?,?,?,?)";
         $prepare = $this->dbh->prepare($sql);
         $prepare->bindParam(1, $facilityID);
         $prepare->bindParam(2, $name);
@@ -41,7 +41,7 @@ class VaccinationFacilityModel extends PdoModel
         $province = $vaccinationFacility['province'];
         $website_url = $vaccinationFacility['website_url'];
         $type = $vaccinationFacility['type'];
-        $sql = "update vaccination_facility set name = ?,phone=?,address=?,province=?,website_url=?,type=? where facilityID=?";
+        $sql = "update Vaccination_Facility set name = ?,phone=?,address=?,province=?,website_url=?,type=? where facilityID=?";
         $prepare = $this->dbh->prepare($sql);
         $prepare->bindParam(7, $facilityID);
         $prepare->bindParam(1, $name);
@@ -54,7 +54,7 @@ class VaccinationFacilityModel extends PdoModel
     }
 
     public function deleteVaccinationFacility($facilityID){
-        $sql = "delete from vaccination_facility where facilityID=?";
+        $sql = "delete from Vaccination_Facility where facilityID=?";
         $prepare = $this->dbh->prepare($sql);
         $prepare->bindParam(1, $facilityID);
         return $prepare->execute();

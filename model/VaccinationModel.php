@@ -8,7 +8,7 @@ class VaccinationModel extends PdoModel
 {
     public function vaccinationList()
     {
-        return $this->toList($this->dbh->query("select * from vaccination"));
+        return $this->toList($this->dbh->query("select * from Vaccination"));
     }
 
     public function insertVaccination($vaccination)
@@ -19,7 +19,7 @@ class VaccinationModel extends PdoModel
         $EID = $vaccination['EID'];
         $doseNumber = $vaccination['doseNumber'];
         $vaccinationDate = $vaccination['vaccinationDate'];
-        $sql = "insert into vaccination values (?,?,?,?,?,?)";
+        $sql = "insert into Vaccination values (?,?,?,?,?,?)";
         $prepare = $this->dbh->prepare($sql);
         $prepare->bindParam(1, $vaccineID);
         $prepare->bindParam(2, $personID);

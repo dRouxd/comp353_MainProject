@@ -10,10 +10,10 @@ use PDOStatement;
 class PdoModel
 {
     private $dbms;
-    private $host;    
-    private $dbName;  
-    private $user;    
-    private $pass;    
+    private $host;    //数据库主机名
+    private $dbName;  //使用的数据库
+    private $user;    //数据库连接用户名
+    private $pass;    //对应的密码
     private $port;
     private $dsn;
     public $dbh;
@@ -31,7 +31,7 @@ class PdoModel
     private function init()
     {
         $this->dbms = 'mysql';
-        $this->host = 'zjc353.encs.concordia.ca';
+        $this->host = 'zjc353.encs.Concordia.ca';
         $this->dbName = 'zjc353_1';
         $this->user = 'zjc353_1';
         $this->pass = 'DTFSK354';

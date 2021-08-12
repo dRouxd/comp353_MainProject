@@ -8,7 +8,8 @@ $personModel = new PersonModel();
 if (isset($_POST['type'])) {
 
     if ($_POST['type'] == 'create') {
-        $personModel->insertPerson($_POST);
+        echo $personModel->insertPerson($_POST);
+        exit();
     }
 
     if ($_POST['type'] == 'update') {

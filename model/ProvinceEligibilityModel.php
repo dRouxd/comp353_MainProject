@@ -10,14 +10,14 @@ class ProvinceEligibilityModel extends PdoModel
 
     public function provinceEligibilityList()
     {
-        return $this->toList($this->dbh->query("select * from province_eligibility"));
+        return $this->toList($this->dbh->query("select * from Province_Eligibility"));
     }
 
     public function insertProvinceEligibility($ProvinceEligibility)
     {
         $province = $ProvinceEligibility['province'];
         $ageGroupNumber = $ProvinceEligibility['ageGroupNumber'];
-        $sql = "insert into province_eligibility values (?,?)";
+        $sql = "insert into Province_Eligibility values (?,?)";
         $prepare = $this->dbh->prepare($sql);
         $prepare->bindParam(1, $province);
         $prepare->bindParam(2, $ageGroupNumber);
@@ -28,7 +28,7 @@ class ProvinceEligibilityModel extends PdoModel
     {
         $province = $ProvinceEligibility['province'];
         $ageGroupNumber = $ProvinceEligibility['ageGroupNumber'];
-        $sql = "update province_eligibility set ageGroupNumber = ? where province = ?";
+        $sql = "update Province_Eligibility set ageGroupNumber = ? where province = ?";
         $prepare = $this->dbh->prepare($sql);
         $prepare->bindParam(2, $province);
         $prepare->bindParam(1, $ageGroupNumber);
@@ -37,7 +37,7 @@ class ProvinceEligibilityModel extends PdoModel
 
     public function deleteProvinceEligibility($province)
     {
-        $sql = "delete from province_eligibility where province = ?";
+        $sql = "delete from Province_Eligibility where province = ?";
         $prepare = $this->dbh->prepare($sql);
         $prepare->bindParam(1, $province);
         return $prepare->execute();

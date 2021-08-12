@@ -9,7 +9,7 @@ class VaccineModel extends PdoModel
 
     public function vaccineList()
     {
-        return $this->toList($this->dbh->query("select * from vaccine"));
+        return $this->toList($this->dbh->query("select * from Vaccine"));
     }
 
 
@@ -19,7 +19,7 @@ class VaccineModel extends PdoModel
         $brand = $vaccine['brand'];
         $currentStatus = $vaccine['currentStatus'];
         $description = $vaccine['description'];
-        $sql = "insert into vaccine values (?,?,?,?)";
+        $sql = "insert into Vaccine values (?,?,?,?)";
         $prepare = $this->dbh->prepare($sql);
         $prepare->bindParam(1, $vaccineID);
         $prepare->bindParam(2, $brand);
@@ -34,7 +34,7 @@ class VaccineModel extends PdoModel
         $brand = $vaccine['brand'];
         $currentStatus = $vaccine['currentStatus'];
         $description = $vaccine['description'];
-        $sql = "update vaccine set brand = ?,currentStatus=?,description=? where vaccineID=?";
+        $sql = "update Vaccine set brand = ?,currentStatus=?,description=? where vaccineID=?";
         $prepare = $this->dbh->prepare($sql);
         $prepare->bindParam(4, $vaccineID);
         $prepare->bindParam(1, $brand);
@@ -45,7 +45,7 @@ class VaccineModel extends PdoModel
 
     public function deleteVaccine($vaccineId)
     {
-        $sql = "delete from vaccine where vaccineId = ?";
+        $sql = "delete from Vaccine where vaccineId = ?";
         $prepare = $this->dbh->prepare($sql);
         $prepare->bindParam(1, $vaccineId);
         return $prepare->execute();

@@ -9,7 +9,7 @@ class InfectionModel extends PdoModel
 
     public function infectionList()
     {
-        return $this->toList($this->dbh->query("select * from infection"));
+        return $this->toList($this->dbh->query("select * from Infection"));
     }
 
     public function insertInfection($infection)
@@ -18,7 +18,7 @@ class InfectionModel extends PdoModel
         $infectionNumber = $infection['infectionNumber'];
         $infectionDate = $infection['infectionDate'];
         $type = $infection['type'];
-        $sql = "insert into infection values (?,?,?,?)";
+        $sql = "insert into Infection values (?,?,?,?)";
         $prepare = $this->dbh->prepare($sql);
         $prepare->bindParam(1, $personID);
         $prepare->bindParam(2, $infectionNumber);
@@ -33,7 +33,7 @@ class InfectionModel extends PdoModel
         $infectionNumber = $infection['infectionNumber'];
         $infectionDate = $infection['infectionDate'];
         $type = $infection['type'];
-        $sql = "update infection set personID=? ,infectionDate=?,type=? where infectionNumber=?";
+        $sql = "update Infection set personID=? ,infectionDate=?,type=? where infectionNumber=?";
         $prepare = $this->dbh->prepare($sql);
         $prepare->bindParam(1, $personID);
         $prepare->bindParam(4, $infectionNumber);
@@ -44,7 +44,7 @@ class InfectionModel extends PdoModel
 
     public function deleteInfection($infectionNumber)
     {
-        $sql = "delete from infection where infectionNumber=?";
+        $sql = "delete from Infection where infectionNumber=?";
         $prepare = $this->dbh->prepare($sql);
         $prepare->bindParam(1, $infectionNumber);
         return $prepare->execute();

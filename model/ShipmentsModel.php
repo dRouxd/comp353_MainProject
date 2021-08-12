@@ -10,7 +10,7 @@ class ShipmentsModel extends PdoModel
 
     public function shipmentsList()
     {
-        return $this->toList($this->dbh->query("select * from shipments"));
+        return $this->toList($this->dbh->query("select * from Shipments"));
     }
 
     public function insertShipments($shipments)
@@ -23,7 +23,7 @@ class ShipmentsModel extends PdoModel
         if ($dosesReceived > $inventoryModel->remain($facilityID, $vaccineID)) {
             return false;
         }
-        $sql = "insert into shipments values (?,?,?,?)";
+        $sql = "insert into Shipments values (?,?,?,?)";
         $prepare = $this->dbh->prepare($sql);
         $prepare->bindParam(1, $facilityID);
         $prepare->bindParam(2, $vaccineID);

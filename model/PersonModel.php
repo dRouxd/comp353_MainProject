@@ -13,7 +13,7 @@ class PersonModel extends PdoModel
 
     public function insertPerson($person)
     {
-        $sql = "insert into Person values (?,?,?,?,?,?,?,?,?,?)";
+        $sql = "insert into Person values (?,?,?,?,?,?,?,?,?,?,?)";
         $prepare = $this->dbh->prepare($sql);
         $prepare->bindParam(1, $person['personID']);
         $prepare->bindParam(2, $person['SSN_Passport']);
@@ -24,13 +24,14 @@ class PersonModel extends PdoModel
         $prepare->bindParam(7, $person['mobileNumber']);
         $prepare->bindParam(8, $person['email']);
         $prepare->bindParam(9, $person['address']);
-        $prepare->bindParam(10, $person['citizenship']);
+        $prepare->bindParam(10, $person['postalCode']);
+        $prepare->bindParam(11, $person['citizenship']);
         return $prepare->execute();
     }
 
     public function updatePerson($person)
     {
-        $sql = "update Person set SSN_Passport = ?,firstName = ?,lastName = ?,DOB = ?,medicareCardNumber = ?,mobileNumber = ?,email = ?,address = ?,citizenship = ? where personID = ?";
+        $sql = "update Person set SSN_Passport = ?,firstName = ?,lastName = ?,DOB = ?,medicareCardNumber = ?,mobileNumber = ?,email = ?,address = ?,postalCode = ?,citizenship = ? where personID = ?";
         $prepare = $this->dbh->prepare($sql);
         $prepare->bindParam(1, $person['SSN_Passport']);
         $prepare->bindParam(2, $person['firstName']);
@@ -40,8 +41,9 @@ class PersonModel extends PdoModel
         $prepare->bindParam(6, $person['mobileNumber']);
         $prepare->bindParam(7, $person['email']);
         $prepare->bindParam(8, $person['address']);
-        $prepare->bindParam(9, $person['citizenship']);
-        $prepare->bindParam(10, $person['personID']);
+        $prepare->bindParam(9, $person['postalCode']);
+        $prepare->bindParam(10, $person['citizenship']);
+        $prepare->bindParam(11, $person['personID']);
         return $prepare->execute();
     }
 
