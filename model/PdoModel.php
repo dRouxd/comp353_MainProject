@@ -31,10 +31,10 @@ class PdoModel
     private function init()
     {
         $this->dbms = 'mysql';
-        $this->host = 'localhost';
-        $this->dbName = 'a13912';
-        $this->user = 'root';
-        $this->pass = '';
+        $this->host = 'zjc353.encs.concordia.ca';
+        $this->dbName = 'zjc353_1';
+        $this->user = 'zjc353_1';
+        $this->pass = 'DTFSK354';
         $this->port = 3306;
         $this->dsn = "$this->dbms:host=$this->host;dbname=$this->dbName";
     }
