@@ -24,10 +24,10 @@ class Model
 
     private function init()
     {
-        $this->user = 'root';
-        $this->pass = '';
-        $this->host = 'localhost';
-        $this->dbName = 'a13912';
+        $this->user = 'zjc353_1';
+        $this->pass = 'DTFSK354';
+        $this->host = 'zjc353.encs.concordia.ca';
+        $this->dbName = 'zjc353_1';
         $this->port = 3306;
     }
 
