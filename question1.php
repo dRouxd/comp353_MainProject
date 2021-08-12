@@ -98,6 +98,10 @@ if (isset($_GET['type'])) {
                             <input type="text" required name="citizenship" id="citizenship" class="form-control">
                         </div>
                         <div class="form-group">
+                            <label for="age">age</label>
+                            <input type="number" required name="age" id="age" class="form-control">
+                        </div>
+                        <div class="form-group">
                             <button type="submit" class="btn btn-block btn-primary">Submit</button>
                         </div>
                     </form>
@@ -118,6 +122,7 @@ if (isset($_GET['type'])) {
             <th>address</th>
             <th>postalCode</th>
             <th>citizenship</th>
+            <th>age</th>
             <th>Options</th>
         </tr>
         <?php
@@ -147,6 +152,8 @@ if (isset($_GET['type'])) {
             echo "<td>$postalCode</td>";
             $citizenship = $item['citizenship'];
             echo "<td>$citizenship</td>";
+            $age = $item['age'];
+            echo "<td>$age</td>";
             echo "<td>";
             echo "<button class='btn-link update'  data-toggle='modal' data-target='#saveModal'>Update</button>";
             echo "<a class='btn-link delete' href='question1.php?type=delete&personId=$personID'>Delete</a>";
@@ -181,8 +188,9 @@ if (isset($_GET['type'])) {
                 $('#postalCode').val(postalCode);
                 let citizenship = $(trElement.children()[10]).text();
                 $('#citizenship').val(citizenship);
+                let age = $(trElement.children()[11]).text();
+                $('#age').val(age);
                 $('#type').val('update');
-                console.log($('#type').val())
             });
 
             $('.save').click(function () {
@@ -197,6 +205,7 @@ if (isset($_GET['type'])) {
                 $('#address').val(null);
                 $('#postalCode').val(null);
                 $('#citizenship').val(null);
+                $('#age').val(null);
                 $('#type').val('create');
             });
         });
