@@ -8,12 +8,12 @@ class PersonModel extends PdoModel
 {
     public function personList()
     {
-        return $this->toList($this->dbh->query("select * from person"));
+        return $this->toList($this->dbh->query("select * from Person"));
     }
 
     public function insertPerson($person)
     {
-        $sql = "insert into person values (?,?,?,?,?,?,?,?,?,?,?)";
+        $sql = "insert into Person values (?,?,?,?,?,?,?,?,?,?,?)";
         $prepare = $this->dbh->prepare($sql);
         $prepare->bindParam(1, $person['personID']);
         $prepare->bindParam(2, $person['SSN_Passport']);
@@ -31,7 +31,7 @@ class PersonModel extends PdoModel
 
     public function updatePerson($person)
     {
-        $sql = "update person set SSN_Passport = ?,firstName = ?,lastName = ?,DOB = ?,medicareCardNumber = ?,mobileNumber = ?,email = ?,address = ?,postalCode = ?,citizenship = ? where personID = ?";
+        $sql = "update Person set SSN_Passport = ?,firstName = ?,lastName = ?,DOB = ?,medicareCardNumber = ?,mobileNumber = ?,email = ?,address = ?,postalCode = ?,citizenship = ? where personID = ?";
         $prepare = $this->dbh->prepare($sql);
         $prepare->bindParam(1, $person['SSN_Passport']);
         $prepare->bindParam(2, $person['firstName']);
@@ -49,7 +49,7 @@ class PersonModel extends PdoModel
 
     public function deletePerson($personId)
     {
-        $sql = "delete from person where personId = ?";
+        $sql = "delete from Person where personId = ?";
         $prepare = $this->dbh->prepare($sql);
         $prepare->bindParam(1, $personId);
         return $prepare->execute();
